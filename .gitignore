@@ -34,3 +34,8 @@ sysinfo.txt
 *.unitypackage
 *.app
 *.exe
+
+# tmp files
+
+*~
+.DS_Store
