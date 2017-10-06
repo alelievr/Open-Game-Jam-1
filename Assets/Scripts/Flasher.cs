@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Flasher : MonoBehaviour {
 
-	public bool		canRepeat;
-	public bool		triggerOnEnter = true;
-	public bool		triggerOnExit = false;
-	public bool		once = true;
+	public bool				triggerOnEnter = true;
+	public bool				triggerOnExit = false;
+	public bool				once = true;
+	bool					isAnimating { get { return sp.enabled; } }
 
 	[Space]
-	public float	delayTrigger = 0f;
-	public float	flashDuration = .2f;
-	public float	fadeOutDuration = .4f;
+	public float			delayTrigger = 0f;
+	public float			flashDuration = .2f;
+	public float			fadeOutDuration = .4f;
+	public AnimationCurve	fadeOutCurve;
 
-	int				flashCount = 0;
-	SpriteRenderer	sp;
+	int						flashCount = 0;
+	SpriteRenderer			sp;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,8 @@ public class Flasher : MonoBehaviour {
 		while (t < 1f)
 		{
 			t = (Time.time - startTime) / fadeOutDuration;
-			sp.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(1f, 0f, t));
+			float e = fadeOutCurve.Evaluate(t);
+			sp.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(1f, 0f, e));
 			yield return null;
 		}
 		sp.enabled = false;
