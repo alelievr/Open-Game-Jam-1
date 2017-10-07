@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4015640591874250}
   - component: {fileID: 212308184454041964}
-  - component: {fileID: 60039843340615228}
   m_Layer: 8
   m_Name: tiles_2
   m_TagString: Untagged
@@ -35,44 +34,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260525104110354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.84, y: -41.1, z: 0}
+  m_LocalPosition: {x: 2.2402935, y: -0.46755037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60039843340615228
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1260525104110354}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.734375, y: 1.25}
-    newSize: {x: 0.734375, y: 1.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.1953125, y: 0.625}
-      - {x: -0.3359375, y: 0.5}
-      - {x: -0.3671875, y: 0.40625}
-      - {x: -0.3671875, y: -0.296875}
-      - {x: -0.3359375, y: -0.484375}
-      - {x: -0.2265625, y: -0.625}
-      - {x: 0.3671875, y: -0.625}
-      - {x: 0.3671875, y: 0.625}
 --- !u!212 &212308184454041964
 SpriteRenderer:
   m_ObjectHideFlags: 1
