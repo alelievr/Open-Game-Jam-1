@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752391112703008}
   - component: {fileID: 114333861600225238}
+  - component: {fileID: 114730335966927008}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51,3 +52,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48798183d4054d9abd8cb3c1d85991d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114730335966927008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1882102195908776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759da241519414db4bfd031d678a5f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultPlatform:
+    type: 0
+    key: 49
+    availableNumber: 1
+    timeBeforeDispawn: 4
+    platformPrefab: {fileID: 1566836128475848, guid: 78788ae611c5c4c9792d1cf6650eb6f2,
+      type: 2}
+  icePlatform:
+    type: 2
+    key: 50
+    availableNumber: 1
+    timeBeforeDispawn: 4
+    platformPrefab: {fileID: 1352382711884178, guid: eae738d97b4a84403bdb8ae203728d4b,
+      type: 2}
+  slimePlatform:
+    type: 1
+    key: 51
+    availableNumber: 1
+    timeBeforeDispawn: 4
+    platformPrefab: {fileID: 1081596849204792, guid: 9506b4039df7b497b82c7d7966da0324,
+      type: 2}
