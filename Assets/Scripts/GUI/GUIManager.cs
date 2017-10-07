@@ -23,11 +23,7 @@ public class GUIManager : MonoBehaviour {
 		points[newPointCount - 1].ActivePoint();
 	}
 	
-	void Update () {
-
-		//Points management:
-
-		if (Input.GetMouseButtonDown(0) && GameManager.instance.points < 4)
-			GameManager.instance.points++;
+	void Update ()
+	{
 	}
 }

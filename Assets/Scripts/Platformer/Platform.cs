@@ -11,13 +11,46 @@ public class Platform : MonoBehaviour {
 	[Space]
 	public float	timeBeforeDispawn = 0f;
 
+	ParticleSystem	ps;
+	SpriteRenderer	sr;
+	Color			color;
+	new Collider2D	collider;
+
 	// Use this for initialization
 	void Start () {
-		
+		ps = GetComponent< ParticleSystem >();
+		sr = GetComponent< SpriteRenderer >();
+		collider = GetComponent< Collider2D >();
+
+		color = sr.color;
+
+		if (dispawn)
+			StartCoroutine(Dispawn());
+		if (blink)
+			StartCoroutine(Blink());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	IEnumerator	Blink()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(blinkTime);
+			sr.color = new Color(0, 0, 0, 0);
+			ps.Stop();
+			yield return new WaitForSeconds(blinkTime);
+			sr.color = color;
+			ps.Play();
+		}
+	}
+
+	IEnumerator	Dispawn()
+	{
+		yield return new WaitForSeconds(timeBeforeDispawn);
+		ps.Stop();
+		Color disabledColor = color;
+		disabledColor.a = 0;
+		StartCoroutine(Utils.FadeOut(sr, color, disabledColor, .4f));
+		collider.enabled = false;
+		Destroy(gameObject, 10f);
 	}
 }
