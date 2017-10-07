@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : Stopmoving {
 
-	public float	maxSpeed = 1f;
-	bool			facingRight = true;
+	public float					maxSpeed = 1f;
+	[HideInInspector] public bool	facingRight = true;
 
 	public GameObject eyesright;
 	public GameObject eyesleft;
