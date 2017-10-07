@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pp1: {fileID: 198322653099283596}
   pp2: {fileID: 198722440464981270}
-  markEnabledColor: {r: 0.3372549, g: 1, b: 0.80784315, a: 1}
+  markEnabledColor: {r: 0.81960785, g: 1, b: 0, a: 1}
   pointEnabledColor: {r: 0, g: 1, b: 1, a: 0.45882353}
   markDisabledColor: {r: 1, g: 1, b: 1, a: 1}
   pointDisabledColor: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 1}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33823532, g: 1, b: 0.8083164, a: 1}
+  m_Color: {r: 0.8206897, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -226,7 +226,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -233742777
+  randomSeed: -1845188921
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -316,7 +316,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 1, b: 0.8344829, a: 1}
+      maxColor: {r: 0, g: 1, b: 0.8344829, a: 0.653}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3488,7 +3488,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -815594972
+  randomSeed: 174149669
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3536,7 +3536,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.04
+      scalar: 0.03
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3641,7 +3641,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.04
-      minScalar: 0.31
+      minScalar: 0.28
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4406,8 +4406,8 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
-        atime1: 5204
+        atime0: 12529
+        atime1: 18311
         atime2: 55512
         atime3: 65535
         atime4: 0

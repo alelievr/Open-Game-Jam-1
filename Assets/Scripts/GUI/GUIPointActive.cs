@@ -45,6 +45,8 @@ public class GUIPointActive : MonoBehaviour {
 
 	public void ActivePoint()
 	{
+		pp1.Simulate(4f);
+
 		pp1.Play();
 		pp2.Play();
 
