@@ -26,7 +26,7 @@ public class RondeEditor : Editor {
 
 		Handles.color = Color.green;
 		for (int i = 0; i < r.list.Count; i++)
-			r.list[i] = Handles.FreeMoveHandle(r.list[i], Quaternion.identity, .1f, Vector3.zero, Handles.DotCap);
+			r.list[i] = Handles.FreeMoveHandle(r.list[i], Quaternion.identity, .1f, Vector3.zero, Handles.DotHandleCap);
 		
 		if (!EditorApplication.isPlaying)	
 			r.gameObject.transform.position = r.list[0];

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : Stopmoving {
 
 	public float	maxSpeed = 1f;
 	bool			facingRight = true;
+
+	public GameObject eyesright;
+	public GameObject eyesleft;
 
 	[Space]
 	public Transform	groundCheck;
@@ -21,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +34,8 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		if (base.cannotmove == true)
+			return ;
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
 
 		float move = Input.GetAxis("Horizontal");
@@ -44,6 +50,13 @@ public class PlayerController : MonoBehaviour {
 
 	void Flip()
 	{
+		if (!spriteRenderer)
+		{
+			eyesright.SetActive(!eyesright.activeInHierarchy);
+			eyesleft.SetActive(!eyesright.activeInHierarchy);
+			facingRight = !facingRight;
+			return;
+		}
 		facingRight = !facingRight;
 		spriteRenderer.flipY = facingRight;
 	}
@@ -56,6 +69,8 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (base.cannotmove == true)
+			return ;
 		if (grounded && Input.GetKeyDown(KeyCode.Space) && canJump)
 		{
 			rigidbody2D.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
