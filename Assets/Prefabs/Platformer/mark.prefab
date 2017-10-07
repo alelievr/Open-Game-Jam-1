@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe327fc677d745a09833d3549ecbd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRepeat: 0
   triggerOnEnter: 1
   triggerOnExit: 0
   once: 1

@@ -27,14 +27,15 @@ public class Flasher : MonoBehaviour {
 	IEnumerator	FadeOut()
 	{
 		float startTime = Time.time;
-		float t = (Time.time - startTime) / fadeOutDuration;
-		while (t < 1f)
+		float t;
+
+		do
 		{
 			t = (Time.time - startTime) / fadeOutDuration;
 			float e = fadeOutCurve.Evaluate(t);
 			sp.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(1f, 0f, e));
 			yield return null;
-		}
+		} while (t < 1f);
 		sp.enabled = false;
 	}
 
