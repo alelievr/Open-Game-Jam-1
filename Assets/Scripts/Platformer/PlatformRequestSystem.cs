@@ -58,7 +58,9 @@ public class PlatformRequestSystem : MonoBehaviour {
 					Destroy(previewGO);
 				
 				previewGO = Instantiate(kp.platformPrefab);
-				previewGO.GetComponent< Platform >().timeBeforeDispawn = kp.timeBeforeDispawn;
+				Platform p = previewGO.GetComponent< Platform >();
+				p.timeBeforeDispawn = kp.timeBeforeDispawn;
+				p.enabled = false;
 				previewGO.GetComponent< Collider2D >().enabled = false;
 				currentPlatformKey = kp;
 				showPreview = true;
