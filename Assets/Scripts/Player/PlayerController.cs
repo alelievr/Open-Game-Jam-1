@@ -24,12 +24,16 @@ public class PlayerController : Stopmoving {
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
+	Animator		anim;
 	
 
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent< SpriteRenderer >();
 		rigidbody2D = GetComponent< Rigidbody2D >();
+		anim = GetComponent< Animator >();
+		anim.SetBool("facingright", facingRight);
+		anim.SetBool("grounded", grounded);
 	}
 
 	void FixedUpdate()
@@ -37,6 +41,7 @@ public class PlayerController : Stopmoving {
 		if (base.cannotmove == true)
 			return ;
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+		anim.SetBool("grounded", grounded);
 
 		float move = Input.GetAxis("Horizontal");
 
@@ -46,19 +51,23 @@ public class PlayerController : Stopmoving {
 			Flip();
 		else if (move < 0 && facingRight)
 			Flip();
+		if (move != 0)
+			anim.SetBool("moving", true);
+		else
+			anim.SetBool("moving", false);	
 	}
 
 	void Flip()
 	{
-		if (!spriteRenderer)
-		{
-			eyesright.SetActive(!eyesright.activeInHierarchy);
-			eyesleft.SetActive(!eyesright.activeInHierarchy);
-			facingRight = !facingRight;
-			return;
-		}
 		facingRight = !facingRight;
-		spriteRenderer.flipY = facingRight;
+		anim.SetBool("facingright", facingRight);
+		// if (!spriteRenderer)
+		// {
+		// 	eyesright.SetActive(!eyesright.activeInHierarchy);
+		// 	eyesleft.SetActive(!eyesright.activeInHierarchy);
+		// 	return;
+		// }
+		spriteRenderer.flipX = facingRight;
 	}
 
 	IEnumerator JumpDelay()
