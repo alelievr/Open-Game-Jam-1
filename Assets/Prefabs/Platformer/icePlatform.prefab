@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 199967896061655090}
   - component: {fileID: 61813256207086990}
   - component: {fileID: 114961564325172070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: icePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

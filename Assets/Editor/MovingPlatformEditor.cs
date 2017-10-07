@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEditor;
 using System.Linq;
 
-[CustomEditor(typeof(Ronde))]
-public class RondeEditor : Editor {
+[CustomEditor(typeof(MovingPlatform))]
+public class MovingPlatformEditor : Editor {
 
-	Ronde	r;
+	MovingPlatform	r;
 
 	void OnEnable()
 	{
-		r = target as Ronde;
+		r = target as MovingPlatform;
 	}
 
 	public override void OnInspectorGUI()
@@ -28,7 +28,7 @@ public class RondeEditor : Editor {
 		for (int i = 0; i < r.list.Count; i++)
 			r.list[i] = Handles.FreeMoveHandle(r.list[i], Quaternion.identity, .1f, Vector3.zero, Handles.DotHandleCap);
 		
-		if (!EditorApplication.isPlaying)	
+		if (!EditorApplication.isPlaying)
 			r.gameObject.transform.position = r.list[0];
 
 		if (r.showPath)

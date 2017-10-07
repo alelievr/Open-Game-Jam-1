@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour {
 
+	//is blincking ?
 	public bool		blink { get { return blinkTime > 0; } }
+	//time where the platform stay visible
 	public float	blinkTime = .0f;
+	//time where the platform is invisible
+	public float	blinkInterval = 1f;
 
 	public bool		dispawn { get { return timeBeforeDispawn > 0; } }
 	[Space]
@@ -36,10 +40,12 @@ public class Platform : MonoBehaviour {
 		{
 			yield return new WaitForSeconds(blinkTime);
 			sr.color = new Color(0, 0, 0, 0);
+			collider.enabled = false;
 			ps.Stop();
-			yield return new WaitForSeconds(blinkTime);
+			yield return new WaitForSeconds(blinkInterval);
 			sr.color = color;
 			ps.Play();
+			collider.enabled = true;
 		}
 	}
 

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ronde : Stopmoving {
-	public List<Vector2> list;
-	public float speed;
-	private int index;
+public class MovingPlatform : MonoBehaviour {
+	public List< Vector2 >	list = new List< Vector2 >();
+	public float			speed = 1f;
+	private int				index;
+
+	public bool		canMove = true;
 
 	public	bool	showPath = false;
 	// Use this for initialization
@@ -15,10 +17,11 @@ public class Ronde : Stopmoving {
 	
 	// Update is called once per frame
 	void Update () {
-		if (base.Stop ())
-			return;
+		if (!canMove)
+			return ;
+		
 		if ((list [index] - (Vector2)transform.position).magnitude > 0.01)
-			this.transform.position = Vector3.MoveTowards (transform.position, list [index], speed * Time.deltaTime);
+			transform.position = Vector3.MoveTowards (transform.position, list [index], speed * Time.deltaTime);
 		else if (index < list.Count - 1)
 			index++;
 		else
