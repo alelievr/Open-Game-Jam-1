@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 63bd03ca62a6449b1bb95c42ab987291
+timeCreated: 1507383469
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Brushstroke Plain
+  fontNames:
+  - Brushstroke Plain
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
