@@ -84,7 +84,7 @@ public class CameraController : MonoBehaviour {
 	
 	void LateUpdate () 
 	{
-		camHalf = GetComponent<Camera>().orthographicSize;
+		// camHalf = GetComponent<Camera>().orthographicSize;
 // Vector3 moveTo;	
 // 		moveTo = playerTransform.position;
 // 		moveTo.z = -10;
@@ -98,41 +98,41 @@ public class CameraController : MonoBehaviour {
 		if (followPlayer)
 		{
 			Vector3 moveTo;
-			Vector3 camUp = transform.position + Vector3.up * camHalf;
-		// //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
-			Vector3 camDown = transform.position - Vector3.up * camHalf;
-			Vector3 camRight = transform.position + Vector3.right * camHalf / 9 * 16;
-			Vector3 camLeft = transform.position - Vector3.right * camHalf / 9 * 16;
+			// Vector3 camUp = transform.position + Vector3.up * camHalf;
+		//	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
+			// Vector3 camDown = transform.position - Vector3.up * camHalf;
+			// Vector3 camRight = transform.position + Vector3.right * camHalf / 9 * 16;
+			// Vector3 camLeft = transform.position - Vector3.right * camHalf / 9 * 16;
 		// //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
 		// 	// Debug.DrawLine(transform.position, camLeft, Color.red, 1f);
 		// 	// Debug.DrawLine(transform.position, camRight , Color.blue, 1f);
 			
-			camCorrection = Vector3.zero;
-			if (!worldLimit.Contains(camRight))
-			{
-				Debug.Log("nocamright");
-				camCorrection.x = camLeft.x - worldLimit.xMax;
-				// moveTo.x = (transform.position.x - moveTo.x > 0f)? moveTo.x - 2 * (transform.position.x - moveTo.x): moveTo.x;
-			}
-			else if (!worldLimit.Contains(camLeft))
-			{
-				Debug.Log("nocamleft");
-				camCorrection.x = camRight.x - worldLimit.xMin;
-				// moveTo.x = (transform.position.x - moveTo.x < 0f)? moveTo.x - 2 * (transform.position.x - moveTo.x): moveTo.x;
-			}
-			if (!worldLimit.Contains(camUp))
-			{
-				Debug.Log("nocamup");
-				camCorrection.y = camDown.y - worldLimit.yMax;
-			}
-			else if (!worldLimit.Contains(camDown))
-			{
-				Debug.Log("nocamdown");
-				camCorrection.y = camUp.y - worldLimit.yMin;
-			}
+			// camCorrection = Vector3.zero;
+			// if (!worldLimit.Contains(camRight))
+			// {
+			// 	Debug.Log("nocamright");
+			// 	camCorrection.x = camLeft.x - worldLimit.xMax;
+			// 	// moveTo.x = (transform.position.x - moveTo.x > 0f)? moveTo.x - 2 * (transform.position.x - moveTo.x): moveTo.x;
+			// }
+			// else if (!worldLimit.Contains(camLeft))
+			// {
+			// 	Debug.Log("nocamleft");
+			// 	camCorrection.x = camRight.x - worldLimit.xMin;
+			// 	// moveTo.x = (transform.position.x - moveTo.x < 0f)? moveTo.x - 2 * (transform.position.x - moveTo.x): moveTo.x;
+			// }
+			// if (!worldLimit.Contains(camUp))
+			// {
+			// 	Debug.Log("nocamup");
+			// 	camCorrection.y = camDown.y - worldLimit.yMax;
+			// }
+			// else if (!worldLimit.Contains(camDown))
+			// {
+			// 	Debug.Log("nocamdown");
+			// 	camCorrection.y = camUp.y - worldLimit.yMin;
+			// }
 		// 	Debug.Log(camCorrection);
 		//	 Debug.Log(currentVelocity.magnitude);
-			moveTo = Vector3.SmoothDamp(transform.position, playerTransform.position + camCorrection, ref(currentVelocity), smoothTime);
+			moveTo = Vector3.SmoothDamp(transform.position, playerTransform.position , ref(currentVelocity), smoothTime);
 			// Debug.Log(moveTo);
 
 			moveTo.x = ((moveTo - (Vector3.right * camHalf / 9 * 16)).x - worldLimit.xMin < 0.001)? transform.position.x : moveTo.x;
