@@ -30,6 +30,7 @@ public class PlayerController : Stopmoving {
 	void Start () {
 		spriteRenderer = GetComponent< SpriteRenderer >();
 		rigidbody2D = GetComponent< Rigidbody2D >();
+		rigidbody2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 	}
 
 	void FixedUpdate()

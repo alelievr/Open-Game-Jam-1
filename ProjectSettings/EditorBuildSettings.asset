@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/camera_follow_player_test.unity
+    guid: 2d701c8a32eb949f397e7ee1af0e3e67
