@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour {
 	void Start()
 	{	
 		// StartCoroutine(LateStart(1));
-		playerTransform = GameObject.Find("player").GetComponent<PlayerController>().transform;
+		playerTransform = Object.FindObjectOfType< PlayerController >().transform;
 		camHalf = GetComponent<Camera>().orthographicSize;
 	}
 	

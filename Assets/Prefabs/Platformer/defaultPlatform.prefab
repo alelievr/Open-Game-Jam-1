@@ -81,7 +81,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkTime: 0
+  blinkInterval: 1
   timeBeforeDispawn: 0
+  blindTime: 0
+  blindPlayer: 0
+  blindTransitionTime: 0
 --- !u!198 &198857967590694262
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 public class Platform : MonoBehaviour {
 
@@ -15,15 +16,27 @@ public class Platform : MonoBehaviour {
 	[Space]
 	public float	timeBeforeDispawn = 0f;
 
+	public bool		blind { get { return blindTime > 0;} }
+	[Space]
+	public float	blindTime = 0.0f;
+	public bool		blindPlayer = false;
+	public float	blindTransitionTime = .4f;
+
 	ParticleSystem	ps;
 	SpriteRenderer	sr;
 	Color			color;
+	new Camera		camera;
+	PostProcessingProfile	ppp;
 	new Collider2D	collider;
+	float			vignetteIntensity;
+	Transform		playerTransform;
 
 	// Use this for initialization
 	void Start () {
 		ps = GetComponent< ParticleSystem >();
 		sr = GetComponent< SpriteRenderer >();
+		ppp = Camera.main.GetComponent< PostProcessingBehaviour >().profile;
+		camera = Camera.main;
 		collider = GetComponent< Collider2D >();
 
 		color = sr.color;
@@ -32,6 +45,43 @@ public class Platform : MonoBehaviour {
 			StartCoroutine(Dispawn());
 		if (blink)
 			StartCoroutine(Blink());
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.tag != "Player")
+			return ;
+		
+		StopCoroutine("ResetBlindness");
+
+		if (blind)
+		{
+			playerTransform = other.transform;
+			blindPlayer = true;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other)
+	{
+		if (other.collider.tag != "Player")
+			return ;
+		
+		StartCoroutine("ResetBlindness");
+	}
+
+	IEnumerator ResetBlindness()
+	{
+		yield return new WaitForSeconds(blindTime);
+
+		while (vignetteIntensity > 0)
+		{
+			blindPlayer = false;
+			var vignetting = ppp.vignette.settings;
+			vignetting.intensity = vignetteIntensity;
+			ppp.vignette.settings = vignetting;
+			vignetteIntensity = Mathf.Clamp01(vignetteIntensity - 0.06f);
+			yield return null;
+		}
 	}
 
 	IEnumerator	Blink()
@@ -58,5 +108,34 @@ public class Platform : MonoBehaviour {
 		StartCoroutine(Utils.FadeOut(sr, color, disabledColor, .4f));
 		collider.enabled = false;
 		Destroy(gameObject, 10f);
+	}
+
+	void Update()
+	{
+		if (blindPlayer)
+		{
+			Vector3 playerPos = playerTransform.position;
+			Vector2 screenPoint = camera.WorldToScreenPoint(playerPos);
+
+			screenPoint.x /= Screen.width;
+			screenPoint.y /= Screen.height;
+			Vector2 vignettingPos = screenPoint;
+
+			var vignetting = ppp.vignette.settings;
+			vignetting.intensity = vignetteIntensity - .1f;
+			vignetting.center = vignettingPos;
+			ppp.vignette.settings = vignetting;
+
+			vignetteIntensity = Mathf.Clamp01(vignetteIntensity + 0.06f);
+		}
+	}
+
+	void OnDestroy()
+	{
+		//reset vignetting to zero
+		var vignetting = ppp.vignette.settings;
+		vignetting.intensity = 0.0f;
+		vignetting.center = Vector2.one / 2f;
+		ppp.vignette.settings = vignetting;
 	}
 }
