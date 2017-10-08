@@ -55,6 +55,7 @@ public class Dedouble : MonoBehaviour {
 			return;
 		GameObject tmp = GameObject.Instantiate (this.gameObject);
 //		Destroy(tmp.GetComponent("Dedouble"));
+	tmp.GetComponent<Rigidbody2D>().velocity = this.GetComponent<Rigidbody2D> ().velocity;
 		this.GetComponent<Stopmoving> ().cannotmove = true;
 		this.GetComponent<Dedouble> ().isdedoubled = true;
 		this.GetComponent<Rigidbody2D> ().isKinematic = true;
@@ -92,9 +93,9 @@ public class Dedouble : MonoBehaviour {
 	void Update () {
 		if (isdedoubled == true)
 			return;
-		if (havededoubled == true && Input.GetKey("down"))
+		if (havededoubled == true && Input.GetKey("r"))
 			redoublation();
-		if (Input.GetKey("up"))
+		if (Input.GetKey("t"))
 		{
 			Dedoublation();
 		}

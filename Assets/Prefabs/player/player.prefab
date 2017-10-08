@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729381988603410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.14, y: 1.56, z: 0}
+  m_LocalPosition: {x: -3.64, y: 0.49, z: 5}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4146388863853398}
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355956544115064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29, y: -2.86, z: 0}
+  m_LocalPosition: {x: 1.42, y: -4.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4123184180101434}
@@ -108,7 +108,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8570238, y: -1.1364622}
   serializedVersion: 2
-  m_Radius: 3.5664077
+  m_Radius: 2.88
 --- !u!95 &95120698685883184
 Animator:
   serializedVersion: 3
@@ -151,13 +151,11 @@ MonoBehaviour:
   cannotmove: 0
   maxSpeed: 4
   facingRight: 1
-  eyesright: {fileID: 0}
-  eyesleft: {fileID: 0}
   groundCheck: {fileID: 4146388863853398}
   groundMask:
     serializedVersion: 2
     m_Bits: 256
-  groundRadius: 0.52
+  groundRadius: 0.37
   jumpPower: 6
   jumpIdle: 0.3
 --- !u!212 &212153685075960720
