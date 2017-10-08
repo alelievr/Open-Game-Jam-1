@@ -62,4 +62,9 @@ public class FinalMark : MonoBehaviour {
 		if (level > 3)
 			yield return StartCoroutine(FadeInColorStage(stage4));
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		StartMarkAnimation();
+	}
 }

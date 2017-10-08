@@ -84,6 +84,8 @@ MonoBehaviour:
   blinkInterval: 1
   timeBeforeDispawn: 0
   blindTime: 1
+  blindPlayer: 0
+  blindTransitionTime: 0.4
 --- !u!198 &198849224097709528
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -140,7 +142,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 1341490999
