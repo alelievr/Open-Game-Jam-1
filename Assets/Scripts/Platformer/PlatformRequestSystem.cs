@@ -93,7 +93,9 @@ public class PlatformRequestSystem : MonoBehaviour {
 
 				GameObject psRef = Instantiate(currentPlatformKey.PsPrefab);
 				Transform psChild = psRef.transform.GetChild(0);
-				psRef.transform.position = (p + (Vector3.up * 10.2f));
+				var psp = (p + (Vector3.up * 10.2f));
+				psp.z = 5; //important !
+				psRef.transform.position = psp;
 				Destroy(previewGO);
 				StartCoroutine(DelayPlatformSpawn(psChild));
 				// previewGO.GetComponent< Collider2D >().enabled = true;

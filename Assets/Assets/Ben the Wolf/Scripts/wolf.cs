@@ -32,6 +32,7 @@ public class wolf : MonoBehaviour {
 
 	Animator		anim;
 	new Rigidbody2D	rigidbody2D;
+	AudioSource audio;
 	[HideInInspector] public bool	facingRight = true;
 
 	// Use this for initialization
@@ -43,6 +44,8 @@ public class wolf : MonoBehaviour {
 		if (debugcamperspectiveactivated)
 			transform.position = new Vector3(transform.position.x, transform.position.y, mapz);
 		Flip();
+		audio = GetComponent<AudioSource>();
+
 	}
 
 	void jump()
@@ -151,6 +154,7 @@ public class wolf : MonoBehaviour {
 	void ouch()
 	{
 		life--;
+		audio.Play();
 		if (life < 1)
 			StartCoroutine(death());
 		else
@@ -168,7 +172,7 @@ public class wolf : MonoBehaviour {
 	
 	void OnTriggerStay2D(Collider2D other)
 	{
-		if (other.tag == "bam" && ouching == false)
+		if (other.tag == "bam" && ouching == false && deathbool == false)
 		{
 			Debug.Log("dfsaf");
 			this.ouch();
