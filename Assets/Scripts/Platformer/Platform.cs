@@ -38,7 +38,6 @@ public class Platform : MonoBehaviour {
 		ppp = Camera.main.GetComponent< PostProcessingBehaviour >().profile;
 		camera = Camera.main;
 		collider = GetComponent< Collider2D >();
-		Debug.Log("ps: " + ps);
 
 		color = sr.color;
 

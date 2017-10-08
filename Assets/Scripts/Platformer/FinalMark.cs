@@ -13,6 +13,7 @@ public class FinalMark : MonoBehaviour {
 	public Color			color = Color.blue;
 	public float			fadeSpeed = .3f;
 	public float			fadeTransitionTime = .1f;
+	public float			timeBeforeChangeLevel = 1.5f;
 	public AnimationCurve	fadeCurve;
 
 	new ParticleSystem		particleSystem;
@@ -30,8 +31,15 @@ public class FinalMark : MonoBehaviour {
 	{
 		int level = GameManager.instance.points;
 
+		particleSystem.Simulate(1);
 		particleSystem.Play();
 		StartCoroutine(FadeInColorMark(level));
+	}
+
+	IEnumerator ChangeLevel()
+	{
+		yield return new WaitForSeconds(timeBeforeChangeLevel);
+		GameManager.instance.LoadNextLevel();
 	}
 
 	IEnumerator	FadeInColorStage(SpriteRenderer stage)
@@ -51,16 +59,15 @@ public class FinalMark : MonoBehaviour {
 
 	IEnumerator	FadeInColorMark(int level)
 	{
-		if (level == 0)
-			yield break ;
-		
-		yield return StartCoroutine(FadeInColorStage(stage1));
+		if (level > 0)
+			yield return StartCoroutine(FadeInColorStage(stage1));
 		if (level > 1)
 			yield return StartCoroutine(FadeInColorStage(stage2));
 		if (level > 2)
 			yield return StartCoroutine(FadeInColorStage(stage3));
 		if (level > 3)
 			yield return StartCoroutine(FadeInColorStage(stage4));
+		yield return StartCoroutine(ChangeLevel());
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

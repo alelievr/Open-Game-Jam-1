@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	//number of gathered points in this level
 	int				_points = 0;
 	GUIManager		guiManager;
+	LevelFadeOut	levelFade;
 	public int		points { get { return _points; } set {
 		_points = value;
 		if (OnPointsModified != null)
@@ -22,5 +23,16 @@ public class GameManager : MonoBehaviour {
 	void Awake()
 	{
 		instance = this;
+	}
+
+	void Start()
+	{
+		levelFade = FindObjectOfType< LevelFadeOut >();
+	}
+
+	public void LoadNextLevel()
+	{
+		//will swhitch the scene at the end of the fade
+		StartCoroutine(levelFade.FadeIn());
 	}
 }

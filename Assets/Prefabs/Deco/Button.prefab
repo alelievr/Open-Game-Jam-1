@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463933917029520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.994, y: 2.266, z: 5}
+  m_LocalPosition: {x: 15.45, y: 6.75, z: 5}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4577270211960676}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9706e975bef1c4adfb9584437b2423ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.25
   destroyOnTrigger: {fileID: 0}
 --- !u!198 &198047767433583902
 ParticleSystem:
@@ -111,7 +111,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -160,7 +160,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1487724838
+  randomSeed: -781703718
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -250,7 +250,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.8, b: 0.14705884, a: 0.146}
+      maxColor: {r: 1, g: 0.8352941, b: 0.14705884, a: 0.078}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3396,7 +3396,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -3446,7 +3446,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 3104e8440c7084095ae4f1c039613dcd, type: 3}
   m_Color: {r: 1, g: 0.76551723, b: 0, a: 1}
   m_FlipX: 0
