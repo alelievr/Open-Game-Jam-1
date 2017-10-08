@@ -24,10 +24,14 @@ public class CameraController : MonoBehaviour {
 
 	void Start()
 	{
+		Vector3 initpos;
 		Transform limitQuadTransform = limitQuad.GetComponent<Transform>();
 		// StartCoroutine(LateStart(1));
 		playerTransform = Object.FindObjectOfType< PlayerController >().transform;
 
+		initpos = playerTransform.position;
+		initpos.z = cameraDist;
+		this.transform.position = initpos;
 		worldLimit.xMin = limitQuadTransform.position.x - limitQuadTransform.localScale.x / 2;
 		worldLimit.xMax = limitQuadTransform.position.x + limitQuadTransform.localScale.x / 2;
 		worldLimit.yMin = limitQuadTransform.position.y - limitQuadTransform.localScale.y / 2;
