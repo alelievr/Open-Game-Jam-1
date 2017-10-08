@@ -5,6 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/camera_follow_player_test.unity
     guid: 2d701c8a32eb949f397e7ee1af0e3e67
+  - enabled: 1
+    path: Assets/Scenes/Levels/Menu.unity
+    guid: 5aed0c75654254fda8521e93d7b0077c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Neo Versaille.unity
+    guid: 0ce89deabc2e2424c96405985d3fbbcd
+  - enabled: 1
+    path: Assets/Scenes/Levels/UnderSea Level.unity
+    guid: 78e09fa3af5bc4b709ec95ab1de76380
+  - enabled: 1
+    path: Assets/Scenes/Levels/BonusLevel.unity
+    guid: 6563045d7d96c47988f11af56544788e

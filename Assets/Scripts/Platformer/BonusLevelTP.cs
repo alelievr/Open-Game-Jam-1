@@ -16,7 +16,7 @@ public class BonusLevelTP : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		levelFade.nextLevelName = bonusLevelName;
-		levelFade.FadeIn();
+		StartCoroutine(levelFade.FadeIn());
 	}
 
 }
