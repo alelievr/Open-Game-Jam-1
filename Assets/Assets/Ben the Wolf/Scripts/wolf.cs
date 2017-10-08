@@ -9,6 +9,7 @@ public class wolf : MonoBehaviour {
 	public int 			life = 2;
 	public float		runspeed = 6f;
 	public float		walkspeed = 2f;
+	bool				deathbool = false;
 
 	float 				maxspeed = 2;
 	float				lastflip = 0;
@@ -88,13 +89,14 @@ public class wolf : MonoBehaviour {
 		Vector3 camdir;
 		camdir = (this.transform.position - Camera.main.transform.position).normalized;
 		transform.rotation = Quaternion.LookRotation(camdir);
-		Debug.Log(transform.rotation);
 		colider.transform.position = transform.position;
 		ouchzone.transform.position = transform.position;
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (deathbool)
+			return ;
 		if (debugcamperspectiveactivated)
 			perspectivecorector();
 		if (isjumping)
@@ -129,41 +131,44 @@ public class wolf : MonoBehaviour {
 
 	IEnumerator death()
 	{
-		anim.SetBool("death", true);
-		yield return (new WaitForSeconds(1));
+		rigidbody2D.velocity = new Vector3(-dir * 10, 10, 0);
+		deathbool = true;
+		yield return new WaitForSeconds(1);
 		GameObject.Destroy(this.gameObject);
 
 	}
 
+	bool ouching = false;
+
 	IEnumerator ouchauxi()
 	{
-		rigidbody2D.velocity = new Vector3(dir * 10, 0, 0);
-		yield return (new WaitForSeconds(1));
+		ouching = true;
+		rigidbody2D.position = new Vector2(rigidbody2D.position.x - dir, rigidbody2D.position.y + 1);
+		yield return new WaitForSeconds(1);
+		ouching = false;
 	}
 
 	void ouch()
 	{
 		life--;
 		if (life < 1)
-			death();
+			StartCoroutine(death());
 		else
-			ouchauxi();
+			StartCoroutine(ouchauxi());
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	public void SetCible(PlayerController c)
 	{
-		if (other.tag == "Player")
-		{
-			anim.SetFloat("speed", 6);
-			cible = other.GetComponent<PlayerController>();
-			maxspeed = runspeed;
-			dir = ((cible.transform.position - this.transform.position ).x < 0) ? -1 : 1;
-		}
+		cible = c;
+		anim.SetFloat("speed", 6);
+		maxspeed = runspeed;
+		dir = ((cible.transform.position - this.transform.position ).x < 0) ? -1 : 1;
 	}
 
+	
 	void OnTriggerStay2D(Collider2D other)
 	{
-		if (other.tag == "bam")
+		if (other.tag == "bam" && ouching == false)
 		{
 			Debug.Log("dfsaf");
 			this.ouch();
