@@ -133,9 +133,12 @@ public class Platform : MonoBehaviour {
 	void OnDestroy()
 	{
 		//reset vignetting to zero
-		var vignetting = ppp.vignette.settings;
-		vignetting.intensity = 0.0f;
-		vignetting.center = Vector2.one / 2f;
-		ppp.vignette.settings = vignetting;
+		if (ppp != null)
+		{
+			var vignetting = ppp.vignette.settings;
+			vignetting.intensity = 0.0f;
+			vignetting.center = Vector2.one / 2f;
+			ppp.vignette.settings = vignetting;
+		}
 	}
 }

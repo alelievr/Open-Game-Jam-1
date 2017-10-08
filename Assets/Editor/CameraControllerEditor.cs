@@ -29,11 +29,11 @@ public class CameraControllerEditor : Editor {
 
 
 		Rect wr = cameraController.worldLimit;
-		Handles.color = Color.blue;
+		 Handles.color = Color.blue;
 
-		Handles.DrawAAPolyLine(wr.min, new Vector2(wr.xMin, wr.yMax), wr.max, new Vector2(wr.xMax, wr.yMin), wr.min);
+		 Handles.DrawAAPolyLine(wr.min, new Vector2(wr.xMin, wr.yMax), wr.max, new Vector2(wr.xMax, wr.yMin), wr.min);
 
-		cameraController.worldLimit.min = Handles.FreeMoveHandle(wr.min, Quaternion.identity, 0.1f, Vector3.zero, Handles.DotHandleCap);
-		cameraController.worldLimit.max = Handles.FreeMoveHandle(wr.max, Quaternion.identity, 0.1f, Vector3.zero, Handles.DotHandleCap);
+		// cameraController.worldLimit.min = Handles.FreeMoveHandle(wr.min, Quaternion.identity, 0.1f, Vector3.zero, Handles.DotHandleCap);
+		// cameraController.worldLimit.max = Handles.FreeMoveHandle(wr.max, Quaternion.identity, 0.1f, Vector3.zero, Handles.DotHandleCap);
 	}
 }

@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CameraController : MonoBehaviour {
+
+	public GameObject	limitQuad;
 
 	public Rect		worldLimit;
 	public Rect		deadZone;
 	public float	deadZoneSize = 3;
 
+	public float 	cameraDist = -10;
 	Transform		playerTransform;
 	Vector3 currentVelocity = new Vector3(0, 0, 0);
 	public float smoothTime = 0.5f;
-	public float smoothTimeWorld = 0.5f;
+	// public float smoothTimeWorld = 0.5f;
 	// public float maxSpeed = 50f;
 
 	bool	followPlayer = false;
@@ -21,9 +25,17 @@ public class CameraController : MonoBehaviour {
 
 	void Start()
 	{	
+		Transform limitQuadTransform = limitQuad.GetComponent<Transform>();
 		// StartCoroutine(LateStart(1));
 		playerTransform = Object.FindObjectOfType< PlayerController >().transform;
-		camHalf = GetComponent<Camera>().orthographicSize;
+
+		worldLimit.xMin = limitQuadTransform.position.x - limitQuadTransform.localScale.x / 2;
+		worldLimit.xMax = limitQuadTransform.position.x + limitQuadTransform.localScale.x / 2;
+		worldLimit.yMin = limitQuadTransform.position.y - limitQuadTransform.localScale.y / 2;
+		worldLimit.yMax = limitQuadTransform.position.y + limitQuadTransform.localScale.y / 2;
+		// camHalf = Mathf.Tan(0.5f * GetComponent<Camera>().fieldOfView) * cameraDist;
+		 camHalf = GetComponent<Camera>().orthographicSize;
+
 	}
 	
 	// IEnumerator LateStart(float waitTime)
@@ -97,13 +109,13 @@ public class CameraController : MonoBehaviour {
 		{
 			Vector3 moveTo;
 		// 	Vector3 camUp = transform.position + Vector3.up * camHalf;
-		// //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
+		// // //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
 		// 	Vector3 camDown = transform.position - Vector3.up * camHalf;
 		// 	Vector3 camRight = transform.position + Vector3.right * camHalf / 9 * 16;
 		// 	Vector3 camLeft = transform.position - Vector3.right * camHalf / 9 * 16;
-		// //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
-		// 	// Debug.DrawLine(transform.position, camLeft, Color.red, 1f);
-		// 	// Debug.DrawLine(transform.position, camRight , Color.blue, 1f);
+		// // //	Debug.DrawLine(transform.position, camUp, Color.red, 1f);
+		// // 	// Debug.DrawLine(transform.position, camLeft, Color.red, 1f);
+		// // 	// Debug.DrawLine(transform.position, camRight , Color.blue, 1f);
 			
 		// 	camCorrection = Vector3.zero;
 		// 	if (!worldLimit.Contains(camRight))
@@ -135,11 +147,10 @@ public class CameraController : MonoBehaviour {
 
 			moveTo.x = ((moveTo - (Vector3.right * camHalf / 9 * 16)).x - worldLimit.xMin < 0.001)? transform.position.x : moveTo.x;
 			moveTo.x = (worldLimit.xMax - (moveTo + (Vector3.right * camHalf / 9 * 16)).x < 0.001)? transform.position.x : moveTo.x;
-		
 			moveTo.y = ((moveTo - (Vector3.up * camHalf)).y - worldLimit.yMin < 0.001)? transform.position.y : moveTo.y;
 			moveTo.y = (worldLimit.yMax - (moveTo + (Vector3.up * camHalf)).y < 0.001)? transform.position.y : moveTo.y;
 			
-			moveTo.z = -10;
+			moveTo.z = cameraDist;
 		//	Debug.Log(moveTo);
 			transform.position = moveTo;
 			// Debug.DrawLine(transform.position, playerTransform.position + camCorrection, Color.green, 1f);
