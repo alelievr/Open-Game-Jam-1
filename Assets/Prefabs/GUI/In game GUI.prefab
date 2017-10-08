@@ -14661,7 +14661,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14974,7 +14974,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.79440206
+      value: 0.7436383
       mode: 0
       spread: 0
       speed:
@@ -15019,7 +15019,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 42.22184
+      value: 36.668293
       mode: 0
       spread: 0
       speed:
@@ -16158,7 +16158,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 1
-    frequency: 1.11
+    frequency: 0.96
     damping: 0
     octaves: 2
     octaveMultiplier: 0.5
@@ -30895,8 +30895,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 226198593
-  m_SortingLayer: -2
+  m_SortingLayerID: -309657787
+  m_SortingLayer: 1
   m_SortingOrder: 100
   m_RenderMode: 0
   m_SortMode: 0

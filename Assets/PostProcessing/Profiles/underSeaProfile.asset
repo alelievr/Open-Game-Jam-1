@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3bdb2cd68f901469e7cc149151eb49, type: 3}
-  m_Name: defaultPostProcessingProfile
+  m_Name: underSeaProfile
   m_EditorClassIdentifier: 
   debugViews:
     m_Enabled: 1
@@ -31,9 +31,9 @@ MonoBehaviour:
   antialiasing:
     m_Enabled: 1
     m_Settings:
-      method: 1
+      method: 0
       fxaaSettings:
-        preset: 2
+        preset: 4
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
@@ -100,10 +100,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.76
+        intensity: 1.57
         threshold: 1.1
         softKnee: 0.5
-        radius: 3
+        radius: 3.15
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       tonemapping:
-        tonemapper: 1
+        tonemapper: 2
         neutralBlackIn: 0.02
         neutralWhiteIn: 10
         neutralBlackOut: 0
@@ -134,9 +134,9 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 1, b: 1, a: 0}
-          power: {r: 1, g: 1, b: 1, a: 0}
-          offset: {r: 1, g: 1, b: 1, a: 0}
+          slope: {r: 0.536642, g: 0.62819463, b: 1, a: 0.10831721}
+          power: {r: 0.53597295, g: 0.6859986, b: 1, a: 0.021276595}
+          offset: {r: 1, g: 0.97856826, b: 0.933711, a: -0.046421662}
         linear:
           lift: {r: 1, g: 1, b: 1, a: 0}
           gamma: {r: 1, g: 1, b: 1, a: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_Enabled: 0
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.065
+      intensity: 0.139
   grain:
     m_Enabled: 0
     m_Settings:
