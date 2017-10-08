@@ -19,3 +19,6 @@ https://www.assetstore.unity3d.com/en/#!/content/83912
 
 # Sprites
 https://webcache.googleusercontent.com/search?q=cache:CkLa_SEdTVEJ:https://opengameart.org/content/underwater-diving-pack+&cd=1&hl=en&ct=clnk&gl=fr
+
+# Sprite
+https://crateboy.itch.io/crateboy-2007-2014

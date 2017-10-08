@@ -9,9 +9,25 @@ public class Markator : MonoBehaviour {
 	new ParticleSystem				particleSystem;
 	List< ParticleCollisionEvent >	collisionEvents = new List< ParticleCollisionEvent >();
 
+	new Camera			camera;
+
 	void Start () {
 
+		camera = Camera.main;
 		particleSystem = GetComponent< ParticleSystem >();
+	}
+
+	void Update()
+	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			Vector3 mousePos = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -camera.transform.position.z));
+
+			Debug.DrawLine(transform.position, mousePos);
+			particleSystem.transform.LookAt(mousePos, Vector3.forward);
+
+			particleSystem.Emit(1);
+		}
 	}
 	
 	void OnParticleCollision(GameObject other)
