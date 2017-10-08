@@ -130,8 +130,10 @@ public class Platform : MonoBehaviour {
 			screenPoint.y /= Screen.height;
 			Vector2 vignettingPos = screenPoint;
 
+
+			Debug.Log("ppp: " + ppp);
 			var vignetting = ppp.vignette.settings;
-			vignetting.intensity = vignetteIntensity - .1f;
+			vignetting.intensity = Mathf.Clamp01(vignetteIntensity - .1f);
 			vignetting.center = vignettingPos;
 			ppp.vignette.settings = vignetting;
 
