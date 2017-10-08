@@ -60,6 +60,9 @@ public class PlayerController : Stopmoving {
 
 	void FixedUpdate()
 	{
+		if (life < 0)
+			return ;
+		
 		float move;
 		
 		move = Input.GetAxis("Horizontal");
