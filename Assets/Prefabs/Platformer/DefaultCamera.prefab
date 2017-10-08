@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 124867988174441930}
   - component: {fileID: 81984426839762712}
   - component: {fileID: 114751315930588334}
-  - component: {fileID: 114186001235566770}
+  - component: {fileID: 114744220171531112}
   m_Layer: 0
   m_Name: DefaultCamera
   m_TagString: MainCamera
@@ -38,17 +38,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411492149267224}
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -1.25, z: -18}
-=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD:Assets/Prefabs/Platformer/DefaultCamera.prefab.2
-  m_LocalPosition: {x: -4.0130334, y: 0, z: -13}
-=======
   m_LocalPosition: {x: -4.0130334, y: -0.0062291026, z: -13}
->>>>>>> db18ec4f62ecd4bf5cf2df69ea634c1184a7cc11
->>>>>>> e1c612db8cc0819c90213a046cf42a111d90b6a3:Assets/Prefabs/Platformer/DefaultCamera.prefab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,7 +95,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411492149267224}
   m_Enabled: 1
---- !u!114 &114186001235566770
+--- !u!114 &114744220171531112
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,18 +109,18 @@ MonoBehaviour:
   limitQuad: {fileID: 0}
   worldLimit:
     serializedVersion: 2
-    x: -10.399723
-    y: -4.25113
-    width: 55.279446
-    height: 16.08226
+    x: -11.202179
+    y: -16.107666
+    width: 57.10436
+    height: 38.095333
   deadZone:
     serializedVersion: 2
-    x: 1.7659316
-    y: 1.9823679
-    width: 3.448748
-    height: 3.264996
+    x: -5.0130334
+    y: -1.0062292
+    width: 2
+    height: 2
   deadZoneSize: 1
-  cameraDist: -17.98
+  cameraDist: -15
   smoothTime: 0.7
 --- !u!114 &114751315930588334
 MonoBehaviour:
