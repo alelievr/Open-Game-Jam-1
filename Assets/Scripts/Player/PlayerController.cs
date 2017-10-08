@@ -6,10 +6,7 @@ using UnityEngine;
 public class PlayerController : Stopmoving {
 
 	public float					maxSpeed = 1f;
-	[HideInInspector] public bool	facingRight = true;
-
-	public GameObject eyesright;
-	public GameObject eyesleft;
+	[HideInInspector] public bool	facingRight = false;
 
 	[Space]
 	public Transform	groundCheck;
@@ -21,6 +18,13 @@ public class PlayerController : Stopmoving {
 	public float		jumpPower = 10f;
 	public float		jumpIdle = .3f;
 	bool				canJump = true;
+
+	public int			life = 5;
+	public float		timeInvuAfterOuch = 0.7f;
+	public float		ouchtime = 0.2f;
+	public float		ouchbacklash = 1f;
+	float				timesinceouch = 100;
+	float				invutime = 0;
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
@@ -34,12 +38,19 @@ public class PlayerController : Stopmoving {
 
 		rigidbody2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 		anim = GetComponent< Animator >();
-		anim.SetBool("facingright", facingRight);
+		Flip();
+		// anim.SetBool("facingright", facingRight);
 		anim.SetBool("grounded", grounded);
 	}
 
 	void FixedUpdate()
 	{
+		timesinceouch += Time.deltaTime;
+		invutime += Time.deltaTime;
+		if (timesinceouch < ouchtime)
+			return ;
+		else
+			anim.SetBool("ouch", false);
 		if (base.cannotmove == true)
 			return ;
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
@@ -57,6 +68,8 @@ public class PlayerController : Stopmoving {
 			anim.SetBool("moving", true);
 		else
 			anim.SetBool("moving", false);	
+
+		anim.SetFloat("vely", rigidbody2D.velocity.y);
 	}
 
 	void Flip()
@@ -72,6 +85,15 @@ public class PlayerController : Stopmoving {
 		spriteRenderer.flipX = facingRight;
 	}
 
+	void ouch()
+	{
+		Debug.Log("ouch");
+		life--;
+		timesinceouch = 0;
+		anim.SetBool("ouch", true);
+
+	}
+
 	IEnumerator JumpDelay()
 	{
 		canJump = false;
@@ -82,11 +104,20 @@ public class PlayerController : Stopmoving {
 	void Update () {
 		if (base.cannotmove == true)
 			return ;
+		if (timesinceouch < ouchtime)
+			return ;
 		if (grounded && Input.GetKeyDown(KeyCode.Space) && canJump)
 		{
 			rigidbody2D.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
 			StartCoroutine(JumpDelay());
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (invutime > timeInvuAfterOuch && other.tag == "ouch")
+			ouch();
+
 	}
 
 	void OnDrawGizmos()

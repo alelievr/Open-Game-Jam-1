@@ -257,8 +257,6 @@ MonoBehaviour:
   cannotmove: 0
   maxSpeed: 4
   facingRight: 1
-  eyesright: {fileID: 1803861423622908}
-  eyesleft: {fileID: 1643176685163796}
   groundCheck: {fileID: 4222642691618096}
   groundMask:
     serializedVersion: 2
