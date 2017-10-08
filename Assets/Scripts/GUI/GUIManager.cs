@@ -7,6 +7,9 @@ public class GUIManager : MonoBehaviour {
 	public GUIPointActive[]	points;
 
 	public GameObject		deadScreen;
+	public GameObject		helpScreen;
+
+	bool					helpScreenActive = false;
 
 	void OnEnable()
 	{
@@ -37,5 +40,14 @@ public class GUIManager : MonoBehaviour {
 	void OnPointsModifiedCallback(int newPointCount)
 	{
 		points[newPointCount - 1].ActivePoint();
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			helpScreenActive = !helpScreenActive;
+			helpScreen.SetActive(helpScreenActive);
+		}
 	}
 }

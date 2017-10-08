@@ -107,7 +107,6 @@ public class Platform : MonoBehaviour {
 	IEnumerator	Dispawn()
 	{
 		yield return new WaitForSeconds(timeBeforeDispawn);
-		Debug.Log("ps: " + ps);
 		ps.Stop();
 		Color disabledColor = color;
 		disabledColor.a = 0;
