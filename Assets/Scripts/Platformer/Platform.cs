@@ -38,9 +38,15 @@ public class Platform : MonoBehaviour {
 		ppp = Camera.main.GetComponent< PostProcessingBehaviour >().profile;
 		camera = Camera.main;
 		collider = GetComponent< Collider2D >();
+		Debug.Log("ps: " + ps);
 
 		color = sr.color;
 
+	}
+	public void	Init(float timeBeforeDispawn, float blinkTime = 0f)
+	{
+		this.timeBeforeDispawn = timeBeforeDispawn;
+		this.blinkTime = blinkTime;
 		if (dispawn)
 			StartCoroutine(Dispawn());
 		if (blink)
@@ -102,11 +108,16 @@ public class Platform : MonoBehaviour {
 	IEnumerator	Dispawn()
 	{
 		yield return new WaitForSeconds(timeBeforeDispawn);
+		Debug.Log("ps: " + ps);
 		ps.Stop();
 		Color disabledColor = color;
 		disabledColor.a = 0;
 		StartCoroutine(Utils.FadeOut(sr, color, disabledColor, .4f));
 		collider.enabled = false;
+		ParticleSystem	ps2 = this.gameObject.GetComponent< ParticleSystem >();
+		ps2.Play();
+		yield return new WaitForSeconds(0.3f);
+		Destroy(this.transform.parent.gameObject);
 		Destroy(gameObject, 10f);
 	}
 

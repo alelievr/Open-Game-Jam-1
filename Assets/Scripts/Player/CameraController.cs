@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class CameraController : MonoBehaviour {
 
 	public GameObject	limitQuad;
@@ -24,7 +23,7 @@ public class CameraController : MonoBehaviour {
 
 
 	void Start()
-	{	
+	{
 		Transform limitQuadTransform = limitQuad.GetComponent<Transform>();
 		// StartCoroutine(LateStart(1));
 		playerTransform = Object.FindObjectOfType< PlayerController >().transform;
