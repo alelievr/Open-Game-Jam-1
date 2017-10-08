@@ -107,7 +107,6 @@ public class Platform : MonoBehaviour {
 	IEnumerator	Dispawn()
 	{
 		yield return new WaitForSeconds(timeBeforeDispawn);
-		Debug.Log("ps: " + ps);
 		ps.Stop();
 		Color disabledColor = color;
 		disabledColor.a = 0;
@@ -131,8 +130,10 @@ public class Platform : MonoBehaviour {
 			screenPoint.y /= Screen.height;
 			Vector2 vignettingPos = screenPoint;
 
+
+			Debug.Log("ppp: " + ppp);
 			var vignetting = ppp.vignette.settings;
-			vignetting.intensity = vignetteIntensity - .1f;
+			vignetting.intensity = Mathf.Clamp01(vignetteIntensity - .1f);
 			vignetting.center = vignettingPos;
 			ppp.vignette.settings = vignetting;
 
