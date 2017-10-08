@@ -12,6 +12,7 @@ public class PlayerController : Stopmoving {
 	public float		jumpPower = 10f;
 	public float		jumpIdle = .3f;
 	public float		maxYVelocity = 8f;
+	public float		minYVelocity = -6f;
 	bool				canJump = true;
 
 	[Space]
@@ -67,8 +68,7 @@ public class PlayerController : Stopmoving {
 		invutime += Time.deltaTime;
 		if (timesinceouch < ouchtime)
 			return ;
-		else
-			anim.SetBool("ouch", false);
+		
 		if (base.cannotmove == true)
 			return ;
 
@@ -82,7 +82,7 @@ public class PlayerController : Stopmoving {
 
 		anim.SetFloat("vely", rigidbody2D.velocity.y);
 
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, Mathf.Clamp(rigidbody2D.velocity.y, -100000, maxYVelocity));
+		rigidbody2D.velocity = new Vector2(move * maxSpeed, Mathf.Clamp(rigidbody2D.velocity.y, minYVelocity, maxYVelocity));
 	}
 
 	void Tapping(float move)
@@ -99,7 +99,6 @@ public class PlayerController : Stopmoving {
 			if (timesincetapping > 0.3f)
 			{
 				istapping = false;
-				anim.SetBool("istapping", false);
 			}
 			else if (timesincetapping > 0.2f)
 				zonebam.gameObject.SetActive(false);
@@ -110,7 +109,7 @@ public class PlayerController : Stopmoving {
 		{
 			istapping = true;
 			timesincetapping = 0;
-			anim.SetBool("istapping", true);
+			anim.SetTrigger("istapping");
 		}
 	}
 
@@ -165,7 +164,7 @@ public class PlayerController : Stopmoving {
 
 	void Die()
 	{
-		anim.SetBool("death", true);
+		anim.SetTrigger("death");
 	}
 
 	void ouch()
@@ -174,7 +173,7 @@ public class PlayerController : Stopmoving {
 		if (life < 1)
 			Die();
 		else
-			anim.SetBool("ouch", true);
+			anim.SetTrigger("ouch");
 		timesinceouch = 0;
 	}
 

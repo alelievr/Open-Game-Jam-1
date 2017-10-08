@@ -1729,7 +1729,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your're dead
+  m_Text: You're dead
 --- !u!198 &198041825335407256
 ParticleSystem:
   m_ObjectHideFlags: 1
