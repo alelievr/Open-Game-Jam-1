@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411492149267224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.37, y: 3.34, z: -15}
+  m_LocalPosition: {x: -4.0130334, y: -0.0062291026, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,22 +106,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290131fb145e14dbc9032c39ec524c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limitQuad: {fileID: 0}
   worldLimit:
     serializedVersion: 2
-    x: -5.8956223
-    y: -1.8644588
-    width: 49.66516
-    height: 14.34848
+    x: -11.202179
+    y: -16.107666
+    width: 57.10436
+    height: 38.095333
   deadZone:
     serializedVersion: 2
-    x: 1.8456264
-    y: 1.9658041
-    width: 2.9184175
-    height: 2.7982402
-  deadZoneSize: 2
-  cameraDist: -18
-  smoothTime: 1
-  smoothTimeWorld: 0.5
+    x: -5.0130334
+    y: -1.0062292
+    width: 2
+    height: 2
+  deadZoneSize: 1
+  cameraDist: -15
+  smoothTime: 0.7
 --- !u!114 &114751315930588334
 MonoBehaviour:
   m_ObjectHideFlags: 1
