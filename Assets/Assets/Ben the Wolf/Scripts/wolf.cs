@@ -6,7 +6,7 @@ public class wolf : MonoBehaviour {
 	PlayerController	cible;
 	bool				running;
 	int 				dir = 0;
-	int life = 2;
+	public int 			life = 2;
 	public float		runspeed = 6f;
 	public float		walkspeed = 2f;
 
@@ -127,11 +127,27 @@ public class wolf : MonoBehaviour {
 		transform.localScale.y, transform.localScale.z);
 	}
 
+	IEnumerator death()
+	{
+		anim.SetBool("death", true);
+		yield return (new WaitForSeconds(1));
+		GameObject.Destroy(this.gameObject);
+
+	}
+
+	IEnumerator ouchauxi()
+	{
+		rigidbody2D.velocity = new Vector3(dir * 10, 0, 0);
+		yield return (new WaitForSeconds(1));
+	}
+
 	void ouch()
 	{
 		life--;
-		if (life == 0)
-			GameObject.Destroy(this.gameObject);
+		if (life < 1)
+			death();
+		else
+			ouchauxi();
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -143,7 +159,14 @@ public class wolf : MonoBehaviour {
 			maxspeed = runspeed;
 			dir = ((cible.transform.position - this.transform.position ).x < 0) ? -1 : 1;
 		}
-		if (other.tag == "Bam")
+	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.tag == "bam")
+		{
+			Debug.Log("dfsaf");
 			this.ouch();
+		}
 	}
 }

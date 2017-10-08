@@ -25,11 +25,16 @@ public class PlayerController : Stopmoving {
 	public float		ouchbacklash = 1f;
 	float				timesinceouch = 100;
 	float				invutime = 0;
+
+	bool				istapping = false;
+	public Collider2D	zonebam;
+	float				timesincetapping;
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
 	Animator		anim;
 	
+	float			tmp;
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +50,8 @@ public class PlayerController : Stopmoving {
 
 	void FixedUpdate()
 	{
+		float move;
+
 		timesinceouch += Time.deltaTime;
 		invutime += Time.deltaTime;
 		if (timesinceouch < ouchtime)
@@ -53,16 +60,43 @@ public class PlayerController : Stopmoving {
 			anim.SetBool("ouch", false);
 		if (base.cannotmove == true)
 			return ;
+
+		if (istapping)
+		{
+			move = transform.position.x - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane)).x;
+			if (!istapping && move > 0 && !facingRight)
+				Flip();
+			else if (!istapping && move < 0 && facingRight)
+				Flip();
+
+			timesincetapping += Time.deltaTime;
+			if (timesincetapping > 0.3f)
+			{
+				istapping = false;
+				anim.SetBool("istapping", false);
+			}
+			else if (timesincetapping > 0.2f)
+				zonebam.gameObject.SetActive(false);
+			else if (timesincetapping > 0.1f)
+				zonebam.gameObject.SetActive(true);
+		}
+		if (!istapping  && Input.GetKey(KeyCode.Mouse1))
+		{
+			istapping = true;
+			timesincetapping = 0;
+			anim.SetBool("istapping", true);
+		}
+
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
 		anim.SetBool("grounded", grounded);
 
-		float move = Input.GetAxis("Horizontal");
+		move = Input.GetAxis("Horizontal");
 
 		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 
-		if (move > 0 && !facingRight)
+		if (!istapping && move > 0 && !facingRight)
 			Flip();
-		else if (move < 0 && facingRight)
+		else if (!istapping && move < 0 && facingRight)
 			Flip();
 		if (move != 0)
 			anim.SetBool("moving", true);
@@ -85,12 +119,22 @@ public class PlayerController : Stopmoving {
 		spriteRenderer.flipX = facingRight;
 	}
 
+	IEnumerator Die()
+	{
+		anim.SetBool("death", true);
+		yield return new WaitForSeconds(1);
+		GameObject.Destroy(this.gameObject);
+			
+	}
+
 	void ouch()
 	{
-		Debug.Log("ouch");
 		life--;
+		if (life < 1)
+			StartCoroutine(Die());
+		else
+			anim.SetBool("ouch", true);
 		timesinceouch = 0;
-		anim.SetBool("ouch", true);
 
 	}
 
