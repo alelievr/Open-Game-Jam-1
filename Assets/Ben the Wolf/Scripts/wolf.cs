@@ -24,6 +24,11 @@ public class wolf : MonoBehaviour {
 	float				distjumped = 0;
 	float				timesincejump = 0;
 
+	public bool			debugcamperspectiveactivated = false;
+	public float		mapz;
+	public GameObject	colider;
+	public GameObject	ouchzone;
+
 	Animator		anim;
 	new Rigidbody2D	rigidbody2D;
 	[HideInInspector] public bool	facingRight = true;
@@ -34,6 +39,8 @@ public class wolf : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		maxspeed = walkspeed;
 		anim.SetFloat("speed", 0);
+		if (debugcamperspectiveactivated)
+			transform.position = new Vector3(transform.position.x, transform.position.y, mapz);
 		Flip();
 	}
 
@@ -45,7 +52,7 @@ public class wolf : MonoBehaviour {
 			jumpstep = 1;
 			anim.SetBool("jump", true);
 			timesincejump = 0;
-			rigidbody2D.velocity = Vector2.zero;
+			rigidbody2D.velocity = Vector3.zero;
 		}
 		else if (jumpstep == 1)
 		{
@@ -57,10 +64,12 @@ public class wolf : MonoBehaviour {
 		{
 			rigidbody2D.velocity = new Vector2(dir * jumpspeed, jumpspeed);
 			distjumped += jumpspeed;
-			if (jumpspeed > distofjump)
+			if (distjumped > distofjump)
 			{
 				jumpstep = 3;
 				timesincejump = 0;
+				anim.SetBool("jump", false);
+				// rigidbody2D.velocity = Vector3.zero;
 			}
 		}
 		else if (jumpstep == 3)
@@ -70,15 +79,29 @@ public class wolf : MonoBehaviour {
 			{
 				jumpstep = 0;
 				isjumping = false;
-				anim.SetBool("jump", false);
 			}
 		}
 	}
 	
+	void perspectivecorector()
+	{
+		Vector3 camdir;
+		camdir = (this.transform.position - Camera.main.transform.position).normalized;
+		transform.rotation = Quaternion.LookRotation(camdir);
+		Debug.Log(transform.rotation);
+		colider.transform.position = transform.position;
+		ouchzone.transform.position = transform.position;
+	}
+
 	// Update is called once per frame
 	void Update () {
+		if (debugcamperspectiveactivated)
+			perspectivecorector();
 		if (isjumping)
+		{
 			jump();
+			return;
+		}
 		if (lastflip > 0)
 			lastflip -= Time.deltaTime;
 		if (cible && lastflip <= 0 && lastjump <= 0)
