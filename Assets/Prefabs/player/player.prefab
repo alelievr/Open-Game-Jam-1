@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 114353622937075130}
   - component: {fileID: 212642687168575290}
   - component: {fileID: 95158649153209714}
-  - component: {fileID: 60356932320002002}
   - component: {fileID: 82769380976385160}
   - component: {fileID: 58586933032970360}
+  - component: {fileID: 58448391295002584}
   m_Layer: 9
   m_Name: player
   m_TagString: Player
@@ -122,27 +122,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 0f6952ad12a6042c1a8fd63e5b0b3582, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58586933032970360
+--- !u!58 &58448391295002584
 CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877347277872538}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.0124922, y: -0.552693}
-  serializedVersion: 2
-  m_Radius: 2.0560198
---- !u!60 &60356932320002002
-PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -153,24 +138,24 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.3, y: 10.48}
-    newSize: {x: 15.3, y: 10.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Points:
-    m_Paths:
-    - - {x: 0.025120974, y: -3.772879}
-      - {x: -0.4897189, y: -3.1192076}
-      - {x: -0.5879414, y: -1.4611268}
-      - {x: 2.7603626, y: -1.430102}
-      - {x: 2.7003562, y: -3.4253428}
-      - {x: 2.4319088, y: -3.76818}
+  m_Offset: {x: 1.2285084, y: -2.3723698}
+  serializedVersion: 2
+  m_Radius: 1.4730442
+--- !u!58 &58586933032970360
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877347277872538}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0f6952ad12a6042c1a8fd63e5b0b3582, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2507236, y: -0.88866055}
+  serializedVersion: 2
+  m_Radius: 2.1537564
 --- !u!61 &61147550726268280
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -310,6 +295,7 @@ MonoBehaviour:
   jumpPower: 12
   jumpIdle: 0.4
   maxYVelocity: 14
+  minYVelocity: -16
   minSlideVelocity: 3
   slimeVelocityIgnore: 6
   life: 1
