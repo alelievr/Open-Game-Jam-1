@@ -29,10 +29,13 @@ public class PlayerController : Stopmoving {
 	bool				istapping = false;
 	public Collider2D	zonebam;
 	float				timesincetapping;
+
+	public AudioClip	run;
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
 	Animator		anim;
+	AudioSource		audiosource;
 	
 	float			tmp;
 
@@ -43,6 +46,7 @@ public class PlayerController : Stopmoving {
 
 		rigidbody2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 		anim = GetComponent< Animator >();
+		audiosource = GetComponent< AudioSource >();
 		Flip();
 		// anim.SetBool("facingright", facingRight);
 		anim.SetBool("grounded", grounded);
@@ -91,6 +95,15 @@ public class PlayerController : Stopmoving {
 		anim.SetBool("grounded", grounded);
 
 		move = Input.GetAxis("Horizontal");
+
+		if (grounded && audiosource.isPlaying == false && move != 0)
+		{
+			audiosource.loop = true;
+			audiosource.clip = run;
+			audiosource.Play();
+		}
+		else if (move == 0 && audiosource.clip == run)
+			audiosource.Stop();
 
 		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 
