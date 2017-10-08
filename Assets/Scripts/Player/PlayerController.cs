@@ -9,15 +9,12 @@ public class PlayerController : Stopmoving {
 	[HideInInspector] public bool	facingRight = false;
 
 	[Space]
-	public Transform	groundCheck;
-	public LayerMask	groundMask;
-	bool				grounded = false;
-	public float		groundRadius = .2f;
-
-	[Space]
 	public float		jumpPower = 10f;
 	public float		jumpIdle = .3f;
 	bool				canJump = true;
+
+	[Space]
+	public float		minSlideVelocity = 3f;
 
 	public int			life = 5;
 	public float		timeInvuAfterOuch = 0.7f;
@@ -25,10 +22,15 @@ public class PlayerController : Stopmoving {
 	public float		ouchbacklash = 1f;
 	float				timesinceouch = 100;
 	float				invutime = 0;
+	bool				sliding = false;
 
 	bool				istapping = false;
 	public Collider2D	zonebam;
 	float				timesincetapping;
+
+	bool				grounded;
+	public Vector3		groundPosition;
+	public Vector2		groundSize;
 	
 	new Rigidbody2D	rigidbody2D;
 	SpriteRenderer	spriteRenderer;
@@ -51,6 +53,8 @@ public class PlayerController : Stopmoving {
 	void FixedUpdate()
 	{
 		float move;
+		
+		move = Input.GetAxis("Horizontal");
 
 		timesinceouch += Time.deltaTime;
 		invutime += Time.deltaTime;
@@ -61,6 +65,21 @@ public class PlayerController : Stopmoving {
 		if (base.cannotmove == true)
 			return ;
 
+		Tapping(move);
+
+		GroundCheck();
+
+		Move(move);
+
+		SlideCheck();
+
+		anim.SetFloat("vely", rigidbody2D.velocity.y);
+
+		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+	}
+
+	void Tapping(float move)
+	{
 		if (istapping)
 		{
 			move = transform.position.x - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane)).x;
@@ -86,14 +105,10 @@ public class PlayerController : Stopmoving {
 			timesincetapping = 0;
 			anim.SetBool("istapping", true);
 		}
+	}
 
-		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-		anim.SetBool("grounded", grounded);
-
-		move = Input.GetAxis("Horizontal");
-
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
-
+	void Move(float move)
+	{
 		if (!istapping && move > 0 && !facingRight)
 			Flip();
 		else if (!istapping && move < 0 && facingRight)
@@ -102,28 +117,40 @@ public class PlayerController : Stopmoving {
 			anim.SetBool("moving", true);
 		else
 			anim.SetBool("moving", false);	
+	}
 
-		anim.SetFloat("vely", rigidbody2D.velocity.y);
+	void GroundCheck()
+	{
+		RaycastHit2D[] results = new RaycastHit2D[10];
+		int collisionNumber = Physics2D.BoxCastNonAlloc(transform.position + groundPosition, groundSize, 0, Vector2.down, results, .0f, 1 << LayerMask.NameToLayer("Ground"));
+
+		grounded = collisionNumber != 0;
+
+		anim.SetBool("grounded", grounded);
+	}
+
+	void SlideCheck()
+	{
+		float arx = Mathf.Abs(rigidbody2D.velocity.x);
+		if (arx > minSlideVelocity && Input.GetKeyDown(KeyCode.DownArrow))
+			sliding = true;
+		if (arx < minSlideVelocity || !grounded)
+			sliding = false;
+		
+		anim.SetBool("sliding", sliding);
 	}
 
 	void Flip()
 	{
 		facingRight = !facingRight;
 		anim.SetBool("facingright", facingRight);
-		// if (!spriteRenderer)
-		// {
-		// 	eyesright.SetActive(!eyesright.activeInHierarchy);
-		// 	eyesleft.SetActive(!eyesright.activeInHierarchy);
-		// 	return;
-		// }
 		spriteRenderer.flipX = facingRight;
 	}
 
-	IEnumerator Die()
+	void Die()
 	{
 		anim.SetBool("death", true);
-		yield return new WaitForSeconds(1);
-		GameObject.Destroy(this.gameObject);
+		Destroy(gameObject, 1);
 			
 	}
 
@@ -131,7 +158,7 @@ public class PlayerController : Stopmoving {
 	{
 		life--;
 		if (life < 1)
-			StartCoroutine(Die());
+			Die();
 		else
 			anim.SetBool("ouch", true);
 		timesinceouch = 0;
@@ -161,12 +188,11 @@ public class PlayerController : Stopmoving {
 	{
 		if (invutime > timeInvuAfterOuch && other.tag == "ouch")
 			ouch();
-
 	}
 
 	void OnDrawGizmos()
 	{
-		Gizmos.color = Color.green;
-		Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireCube(transform.position + groundPosition, groundSize);
 	}
 }
