@@ -26,7 +26,6 @@ public class Follow_particule : MonoBehaviour {
 			Vector3 v = transform.position - particles[i].position;
 			// float xVel = (particles[i].remainingLifetime / particles[i].startLifetime) * distance;
 			particles[i].velocity += v * Time.deltaTime * 3;
-			// // particles[i].
 			// particlesystem.main.simulationSpace = ParticleSystemSimulationSpace.Local;
 		}
 	
