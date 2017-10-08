@@ -13,49 +13,49 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: moving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: vely
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: ouch
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: death
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: istapping
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: sliding
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -963,7 +963,7 @@ AnimatorStateMachine:
     m_Position: {x: 492, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102347332446839562}
-    m_Position: {x: -120, y: 48, z: 0}
+    m_Position: {x: -300, y: 36, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102328141822902846}
     m_Position: {x: 180, y: -12, z: 0}
@@ -972,7 +972,7 @@ AnimatorStateMachine:
     m_Position: {x: 204, y: 144, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102005443959776640}
-    m_Position: {x: -120, y: 264, z: 0}
+    m_Position: {x: -228, y: 324, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102472681381188216}
     m_Position: {x: 192, y: -276, z: 0}
