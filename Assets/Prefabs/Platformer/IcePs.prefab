@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 199730648351551250}
   m_Layer: 0
   m_Name: EndOfPlatformPs (1)
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 199777960644856676}
   m_Layer: 8
   m_Name: IcePs
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 199519422118939688}
   m_Layer: 8
   m_Name: IcePlatformJean
-  m_TagString: Untagged
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1674102269487182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 8, z: 0}
+  m_LocalPosition: {x: -2.8386536, y: 0.628458, z: 0}
   m_LocalScale: {x: 1.8023996, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4320187457136974}
@@ -6874,7 +6874,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -425443940
+  randomSeed: 1488992147
   InitialModule:
     serializedVersion: 3
     enabled: 1

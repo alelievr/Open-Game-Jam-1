@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 199275339609576502}
   m_Layer: 8
   m_Name: SlimePlatformJean
-  m_TagString: Untagged
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 199780354173804418}
   m_Layer: 8
   m_Name: SlimePs
-  m_TagString: Untagged
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

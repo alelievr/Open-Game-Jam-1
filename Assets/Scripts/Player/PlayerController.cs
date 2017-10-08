@@ -11,10 +11,14 @@ public class PlayerController : Stopmoving {
 	[Space]
 	public float		jumpPower = 10f;
 	public float		jumpIdle = .3f;
+	public float		maxYVelocity = 8f;
 	bool				canJump = true;
 
 	[Space]
 	public float		minSlideVelocity = 3f;
+
+	[Space]
+	public float		slimeVelocityIgnore = .5f;
 
 	public int			life = 5;
 	public float		timeInvuAfterOuch = 0.7f;
@@ -78,7 +82,7 @@ public class PlayerController : Stopmoving {
 
 		anim.SetFloat("vely", rigidbody2D.velocity.y);
 
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+		rigidbody2D.velocity = new Vector2(move * maxSpeed, Mathf.Clamp(rigidbody2D.velocity.y, -100000, maxYVelocity));
 	}
 
 	void Tapping(float move)
@@ -102,7 +106,7 @@ public class PlayerController : Stopmoving {
 			else if (timesincetapping > 0.1f)
 				zonebam.gameObject.SetActive(true);
 		}
-		if (!istapping  && Input.GetKey(KeyCode.Mouse1))
+		if (!istapping && Input.GetKey(KeyCode.Mouse1))
 		{
 			istapping = true;
 			timesincetapping = 0;
@@ -162,8 +166,6 @@ public class PlayerController : Stopmoving {
 	void Die()
 	{
 		anim.SetBool("death", true);
-		Destroy(gameObject, 1);
-			
 	}
 
 	void ouch()
@@ -174,7 +176,6 @@ public class PlayerController : Stopmoving {
 		else
 			anim.SetBool("ouch", true);
 		timesinceouch = 0;
-
 	}
 
 	IEnumerator JumpDelay()
@@ -193,6 +194,15 @@ public class PlayerController : Stopmoving {
 		{
 			rigidbody2D.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
 			StartCoroutine(JumpDelay());
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.tag == "Slime")
+		{
+			if (rigidbody2D.velocity.y < slimeVelocityIgnore)
+				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
 		}
 	}
 

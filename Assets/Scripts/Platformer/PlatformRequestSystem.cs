@@ -83,8 +83,7 @@ public class PlatformRequestSystem : MonoBehaviour {
 
 		if (showPreview && previewGO != null)
 		{
-			Vector3 p = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -camera.transform.position.z));
-			p.z = 0;
+			Vector3 p = camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -camera.transform.position.z + 5));
 			previewGO.transform.position = p;
 			
 			//place platform by pressing enter, return or mouse left click
@@ -94,7 +93,6 @@ public class PlatformRequestSystem : MonoBehaviour {
 				GameObject psRef = Instantiate(currentPlatformKey.PsPrefab);
 				Transform psChild = psRef.transform.GetChild(0);
 				var psp = (p + (Vector3.up * 10.2f));
-				psp.z = 5; //important !
 				psRef.transform.position = psp;
 				Destroy(previewGO);
 				StartCoroutine(DelayPlatformSpawn(psChild));
