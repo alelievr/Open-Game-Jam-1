@@ -934,7 +934,7 @@ MonoBehaviour:
   preptimetojump: 0.3
   jumprecovry: 0.5
   debugcamperspectiveactivated: 1
-  mapz: 0
+  mapz: 5
   colider: {fileID: 1919881037169182}
   ouchzone: {fileID: 1439319871905106}
   facingRight: 1

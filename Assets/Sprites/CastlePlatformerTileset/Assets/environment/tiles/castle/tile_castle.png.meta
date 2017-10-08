@@ -1,0 +1,1790 @@
+fileFormatVersion: 2
+guid: fd5de5ebcccce45bcbb60af92ef268ee
+timeCreated: 1507485646
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tile_castle_0
+    21300002: tile_castle_1
+    21300004: tile_castle_2
+    21300006: tile_castle_3
+    21300008: tile_castle_4
+    21300010: tile_castle_5
+    21300012: tile_castle_6
+    21300014: tile_castle_7
+    21300016: tile_castle_8
+    21300018: tile_castle_9
+    21300020: tile_castle_10
+    21300022: tile_castle_11
+    21300024: tile_castle_12
+    21300026: tile_castle_13
+    21300028: tile_castle_14
+    21300030: tile_castle_15
+    21300032: tile_castle_16
+    21300034: tile_castle_17
+    21300036: tile_castle_18
+    21300038: tile_castle_19
+    21300040: tile_castle_20
+    21300042: tile_castle_21
+    21300044: tile_castle_22
+    21300046: tile_castle_23
+    21300048: tile_castle_24
+    21300050: tile_castle_25
+    21300052: tile_castle_26
+    21300054: tile_castle_27
+    21300056: tile_castle_28
+    21300058: tile_castle_29
+    21300060: tile_castle_30
+    21300062: tile_castle_31
+    21300064: tile_castle_32
+    21300066: tile_castle_33
+    21300068: tile_castle_34
+    21300070: tile_castle_35
+    21300072: tile_castle_36
+    21300074: tile_castle_37
+    21300076: tile_castle_38
+    21300078: tile_castle_39
+    21300080: tile_castle_40
+    21300082: tile_castle_41
+    21300084: tile_castle_42
+    21300086: tile_castle_43
+    21300088: tile_castle_44
+    21300090: tile_castle_45
+    21300092: tile_castle_46
+    21300094: tile_castle_47
+    21300096: tile_castle_48
+    21300098: tile_castle_49
+    21300100: tile_castle_50
+    21300102: tile_castle_51
+    21300104: tile_castle_52
+    21300106: tile_castle_53
+    21300108: tile_castle_54
+    21300110: tile_castle_55
+    21300112: tile_castle_56
+    21300114: tile_castle_57
+    21300116: tile_castle_58
+    21300118: tile_castle_59
+    21300120: tile_castle_60
+    21300122: tile_castle_61
+    21300124: tile_castle_62
+    21300126: tile_castle_63
+    21300128: tile_castle_64
+    21300130: tile_castle_65
+    21300132: tile_castle_66
+    21300134: tile_castle_67
+    21300136: tile_castle_68
+    21300138: tile_castle_69
+    21300140: tile_castle_70
+    21300142: tile_castle_71
+    21300144: tile_castle_72
+    21300146: tile_castle_73
+    21300148: tile_castle_74
+    21300150: tile_castle_75
+    21300152: tile_castle_76
+    21300154: tile_castle_77
+    21300156: tile_castle_78
+    21300158: tile_castle_79
+    21300160: tile_castle_80
+    21300162: tile_castle_81
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tile_castle_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 417
+        width: 82
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 14, y: 8, z: 0, w: 11}
+      outline:
+      - - {x: -47, y: 15.5}
+        - {x: -47, y: -15.5}
+        - {x: 47, y: -15.5}
+        - {x: 47, y: 15.5}
+      physicsShape:
+      - - {x: -47, y: 15.5}
+        - {x: -47, y: -15.5}
+        - {x: 47, y: -15.5}
+        - {x: 47, y: 15.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 96
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 15, y: 9, z: 12, w: 0}
+      outline:
+      - - {x: -47.5, y: 15.5}
+        - {x: -47.5, y: -15.5}
+        - {x: 47.5, y: -15.5}
+        - {x: 47.5, y: 15.5}
+      physicsShape:
+      - - {x: -47.5, y: 15.5}
+        - {x: -47.5, y: -15.5}
+        - {x: 47.5, y: -15.5}
+        - {x: 47.5, y: 15.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 448
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 16}
+      physicsShape:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 348
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 34}
+        - {x: -32.5, y: -34}
+        - {x: 32.5, y: -34}
+        - {x: 32.5, y: 34}
+      physicsShape:
+      - - {x: -32.5, y: 34}
+        - {x: -32.5, y: -34}
+        - {x: 32.5, y: -34}
+        - {x: 32.5, y: 34}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 95
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 50.5}
+        - {x: -47.5, y: -50.5}
+        - {x: 47.5, y: -50.5}
+        - {x: 47.5, y: 50.5}
+      physicsShape:
+      - - {x: -47.5, y: 50.5}
+        - {x: -47.5, y: -50.5}
+        - {x: 47.5, y: -50.5}
+        - {x: 47.5, y: 50.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_9
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 302
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 23}
+        - {x: -23.5, y: -23}
+        - {x: 23.5, y: -23}
+        - {x: 23.5, y: 23}
+      physicsShape:
+      - - {x: -23.5, y: 23}
+        - {x: -23.5, y: -23}
+        - {x: 23.5, y: -23}
+        - {x: 23.5, y: 23}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 255
+        width: 40
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 47}
+        - {x: -20, y: -47}
+        - {x: 20, y: -47}
+        - {x: 20, y: 47}
+      physicsShape:
+      - - {x: -20, y: 47}
+        - {x: -20, y: -47}
+        - {x: 20, y: -47}
+        - {x: 20, y: 47}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_11
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 358
+        width: 31
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 18}
+      outline:
+      - - {x: -15.5, y: 39.5}
+        - {x: -15.5, y: -39.5}
+        - {x: 15.5, y: -39.5}
+        - {x: 15.5, y: 39.5}
+      physicsShape:
+      - - {x: -15.5, y: 39.5}
+        - {x: -15.5, y: -39.5}
+        - {x: 15.5, y: -39.5}
+        - {x: 15.5, y: 39.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 356
+        width: 63
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 46}
+        - {x: 17.5, y: 44}
+        - {x: 14.5, y: 42}
+        - {x: 9.5, y: 40}
+        - {x: 6.5, y: 38}
+        - {x: 1.5, y: 36}
+        - {x: -1.5, y: 34}
+        - {x: -6.5, y: 32}
+        - {x: -9.5, y: 30}
+        - {x: -14.5, y: 28}
+        - {x: -17.5, y: 26}
+        - {x: -22.5, y: 24}
+        - {x: -25.5, y: 22}
+        - {x: -30.5, y: 20}
+        - {x: -31.5, y: 19}
+        - {x: -31.5, y: -49}
+        - {x: 31.5, y: -49}
+        - {x: 31.5, y: 48}
+        - {x: 25.5, y: 48}
+      - - {x: -31.5, y: 49}
+        - {x: -31.5, y: 39}
+        - {x: 0.5, y: 39}
+        - {x: 2.5, y: 41}
+        - {x: 2.5, y: 49}
+      physicsShape:
+      - - {x: 22.5, y: 46}
+        - {x: 17.5, y: 44}
+        - {x: 14.5, y: 42}
+        - {x: 9.5, y: 40}
+        - {x: 6.5, y: 38}
+        - {x: 1.5, y: 36}
+        - {x: -1.5, y: 34}
+        - {x: -6.5, y: 32}
+        - {x: -9.5, y: 30}
+        - {x: -14.5, y: 28}
+        - {x: -17.5, y: 26}
+        - {x: -22.5, y: 24}
+        - {x: -25.5, y: 22}
+        - {x: -30.5, y: 20}
+        - {x: -31.5, y: 19}
+        - {x: -31.5, y: -49}
+        - {x: 31.5, y: -49}
+        - {x: 31.5, y: 48}
+        - {x: 25.5, y: 48}
+      - - {x: -31.5, y: 49}
+        - {x: -31.5, y: 39}
+        - {x: 0.5, y: 39}
+        - {x: 2.5, y: 41}
+        - {x: 2.5, y: 49}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 355
+        width: 63
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 49.5}
+        - {x: -31.5, y: 49.5}
+        - {x: -31.5, y: -50.5}
+        - {x: 31.5, y: -50.5}
+        - {x: 31.5, y: 22.5}
+        - {x: 26.5, y: 31.5}
+      - - {x: -1.5, y: 50.5}
+        - {x: -1.5, y: 42.5}
+        - {x: 0.5, y: 40.5}
+        - {x: 31.5, y: 40.5}
+        - {x: 31.5, y: 50.5}
+      physicsShape:
+      - - {x: -24.5, y: 49.5}
+        - {x: -31.5, y: 49.5}
+        - {x: -31.5, y: -50.5}
+        - {x: 31.5, y: -50.5}
+        - {x: 31.5, y: 22.5}
+        - {x: 26.5, y: 31.5}
+      - - {x: -1.5, y: 50.5}
+        - {x: -1.5, y: 42.5}
+        - {x: 0.5, y: 40.5}
+        - {x: 31.5, y: 40.5}
+        - {x: 31.5, y: 50.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 326
+        width: 33
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 64}
+        - {x: -15, y: 43}
+        - {x: -15, y: -65}
+        - {x: 15, y: -65}
+        - {x: 15, y: 64}
+      - - {x: -12, y: 56}
+        - {x: -12, y: 65}
+        - {x: -15, y: 65}
+        - {x: -15, y: 55}
+      physicsShape:
+      - - {x: 8, y: 64}
+        - {x: -15, y: 43}
+        - {x: -15, y: -65}
+        - {x: 15, y: -65}
+        - {x: 15, y: 64}
+      - - {x: -12, y: 56}
+        - {x: -12, y: 65}
+        - {x: -15, y: 65}
+        - {x: -15, y: 55}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 327
+        width: 31
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -64.5}
+        - {x: 17, y: -64.5}
+        - {x: 17, y: 55.5}
+        - {x: -1, y: 63.5}
+        - {x: -17, y: 63.5}
+      physicsShape:
+      - - {x: -17, y: -64.5}
+        - {x: 17, y: -64.5}
+        - {x: 17, y: 55.5}
+        - {x: -1, y: 63.5}
+        - {x: -17, y: 63.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 64
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 19}
+        - {x: -32, y: -19}
+        - {x: 32, y: -19}
+        - {x: 32, y: 19}
+      physicsShape:
+      - - {x: -32, y: 19}
+        - {x: -32, y: -19}
+        - {x: 32, y: -19}
+        - {x: 32, y: 19}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 326
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 15}
+        - {x: -16.5, y: -15}
+        - {x: 16.5, y: -15}
+        - {x: 16.5, y: 15}
+      physicsShape:
+      - - {x: -16.5, y: 15}
+        - {x: -16.5, y: -15}
+        - {x: 16.5, y: -15}
+        - {x: 16.5, y: 15}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_18
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 254
+        width: 96
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 16.5}
+        - {x: -48, y: -16.5}
+        - {x: 48, y: -16.5}
+        - {x: 48, y: 16.5}
+      physicsShape:
+      - - {x: -48, y: 16.5}
+        - {x: -48, y: -16.5}
+        - {x: 48, y: -16.5}
+        - {x: 48, y: 16.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 191
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16.5}
+        - {x: -16, y: -16.5}
+        - {x: 16, y: -16.5}
+        - {x: 16, y: 16.5}
+      physicsShape:
+      - - {x: -16, y: 16.5}
+        - {x: -16, y: -16.5}
+        - {x: 16, y: -16.5}
+        - {x: 16, y: 16.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 33
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 75}
+      outline:
+      - - {x: -16.5, y: 53}
+        - {x: -16.5, y: -53}
+        - {x: 16.5, y: -53}
+        - {x: 16.5, y: 52}
+        - {x: 13.5, y: 53}
+      physicsShape:
+      - - {x: -16.5, y: 53}
+        - {x: -16.5, y: -53}
+        - {x: 16.5, y: -53}
+        - {x: 16.5, y: 52}
+        - {x: 13.5, y: 53}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_27
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 194
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: 21.5}
+        - {x: -15.5, y: 16.5}
+        - {x: -15.5, y: -22.5}
+        - {x: 15.5, y: -22.5}
+        - {x: 15.5, y: 16.5}
+        - {x: 7.5, y: 21.5}
+      physicsShape:
+      - - {x: -7.5, y: 21.5}
+        - {x: -15.5, y: 16.5}
+        - {x: -15.5, y: -22.5}
+        - {x: 15.5, y: -22.5}
+        - {x: 15.5, y: 16.5}
+        - {x: 7.5, y: 21.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_28
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 126
+        width: 33
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 61}
+        - {x: -16.5, y: 54}
+        - {x: -16.5, y: -61}
+        - {x: 16.5, y: -61}
+        - {x: 16.5, y: 55}
+        - {x: 8.5, y: 61}
+      physicsShape:
+      - - {x: -8.5, y: 61}
+        - {x: -16.5, y: 54}
+        - {x: -16.5, y: -61}
+        - {x: 16.5, y: -61}
+        - {x: 16.5, y: 55}
+        - {x: 8.5, y: 61}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_29
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 191
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 23.5}
+        - {x: -16.5, y: 21.5}
+        - {x: -16.5, y: -25.5}
+        - {x: 16.5, y: -25.5}
+        - {x: 16.5, y: 17.5}
+        - {x: 10.5, y: 23.5}
+      physicsShape:
+      - - {x: -8.5, y: 23.5}
+        - {x: -16.5, y: 21.5}
+        - {x: -16.5, y: -25.5}
+        - {x: 16.5, y: -25.5}
+        - {x: 16.5, y: 17.5}
+        - {x: 10.5, y: 23.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 38, y: 0, z: 26, w: 25}
+      outline:
+      - - {x: -13, y: 29.5}
+        - {x: -18, y: 28.5}
+        - {x: -26, y: 14.5}
+        - {x: -26, y: -29.5}
+        - {x: 26, y: -29.5}
+        - {x: 26, y: 29.5}
+      physicsShape:
+      - - {x: -13, y: 29.5}
+        - {x: -18, y: 28.5}
+        - {x: -26, y: 14.5}
+        - {x: -26, y: -29.5}
+        - {x: 26, y: -29.5}
+        - {x: 26, y: 29.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_33
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 132
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 11.5}
+        - {x: -12.5, y: -11.5}
+        - {x: 12.5, y: -11.5}
+        - {x: 12.5, y: 11.5}
+      physicsShape:
+      - - {x: -12.5, y: 11.5}
+        - {x: -12.5, y: -11.5}
+        - {x: 12.5, y: -11.5}
+        - {x: 12.5, y: 11.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_34
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 128
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 21, y: 0, z: 26, w: 14}
+      outline:
+      - - {x: -31.5, y: 30.5}
+        - {x: -31.5, y: -30.5}
+        - {x: 31.5, y: -30.5}
+        - {x: 31.5, y: 30.5}
+      physicsShape:
+      - - {x: -31.5, y: 30.5}
+        - {x: -31.5, y: -30.5}
+        - {x: 31.5, y: -30.5}
+        - {x: 31.5, y: 30.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -15}
+        - {x: -15, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+      physicsShape:
+      - - {x: -10, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -15}
+        - {x: -15, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_36
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 96
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -15, y: 13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 13}
+        - {x: 11, y: 16}
+      physicsShape:
+      - - {x: -12, y: 16}
+        - {x: -15, y: 13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 15, y: 13}
+        - {x: 11, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_37
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 96
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 16}
+        - {x: -16.5, y: -16}
+        - {x: 16.5, y: -16}
+        - {x: 16.5, y: 16}
+      - - {x: -2.5, y: 5}
+        - {x: 4.5, y: 6}
+        - {x: 6.5, y: -4}
+        - {x: -2.5, y: -6}
+      physicsShape:
+      - - {x: -16.5, y: 16}
+        - {x: -16.5, y: -16}
+        - {x: 16.5, y: -16}
+        - {x: 16.5, y: 16}
+      - - {x: -2.5, y: 5}
+        - {x: 4.5, y: 6}
+        - {x: 6.5, y: -4}
+        - {x: -2.5, y: -6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 16}
+        - {x: -10, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -12}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 8}
+        - {x: 14, y: 11}
+      physicsShape:
+      - - {x: 10, y: 16}
+        - {x: -10, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -12}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 8}
+        - {x: 14, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_39
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 96
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 11}
+        - {x: 13.5, y: 16}
+      physicsShape:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 11}
+        - {x: 13.5, y: 16}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 16}
+        - {x: -10, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -12}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 8}
+        - {x: 14, y: 11}
+      physicsShape:
+      - - {x: 10, y: 16}
+        - {x: -10, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -12}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 16, y: -12}
+        - {x: 16, y: 8}
+        - {x: 14, y: 11}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      - - {x: -3, y: 5}
+        - {x: 4, y: 6}
+        - {x: 6, y: -4}
+        - {x: -3, y: -6}
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      - - {x: -3, y: 5}
+        - {x: 4, y: 6}
+        - {x: 6, y: -4}
+        - {x: -3, y: -6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 16
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: -11.5}
+        - {x: -4.5, y: -11.5}
+        - {x: 8.5, y: -7.5}
+        - {x: 8.5, y: 4.5}
+        - {x: -8.5, y: 4.5}
+      physicsShape:
+      - - {x: -8.5, y: -11.5}
+        - {x: -4.5, y: -11.5}
+        - {x: 8.5, y: -7.5}
+        - {x: 8.5, y: 4.5}
+        - {x: -8.5, y: 4.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_44
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 15
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -3.5}
+        - {x: 16, y: -3.5}
+        - {x: 16, y: 6.5}
+        - {x: -16, y: 6.5}
+      physicsShape:
+      - - {x: -16, y: -3.5}
+        - {x: 16, y: -3.5}
+        - {x: 16, y: 6.5}
+        - {x: -16, y: 6.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_45
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 14
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: -3.5}
+        - {x: -5.5, y: -10.5}
+        - {x: 2.5, y: -10.5}
+        - {x: 13.5, y: -5.5}
+        - {x: 13.5, y: 6.5}
+        - {x: -13.5, y: 6.5}
+      physicsShape:
+      - - {x: -13.5, y: -3.5}
+        - {x: -5.5, y: -10.5}
+        - {x: 2.5, y: -10.5}
+        - {x: 13.5, y: -5.5}
+        - {x: 13.5, y: 6.5}
+        - {x: -13.5, y: 6.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_46
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 14
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: -4}
+        - {x: -4, y: -7}
+        - {x: 6, y: -11}
+        - {x: 7, y: -11}
+        - {x: 7, y: 6}
+        - {x: -7, y: 6}
+      physicsShape:
+      - - {x: -7, y: -4}
+        - {x: -4, y: -7}
+        - {x: 6, y: -11}
+        - {x: 7, y: -11}
+        - {x: 7, y: 6}
+        - {x: -7, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_47
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 15
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -4}
+        - {x: 3, y: -4}
+        - {x: 6, y: 0}
+        - {x: 6, y: 5}
+        - {x: 5, y: 6}
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -6, y: -4}
+        - {x: 3, y: -4}
+        - {x: 6, y: 0}
+        - {x: 6, y: 5}
+        - {x: 5, y: 6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_48
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 15
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: 0.5}
+        - {x: -3.5, y: -4.5}
+        - {x: 8.5, y: -4.5}
+        - {x: 8.5, y: 5.5}
+        - {x: -8.5, y: 5.5}
+      physicsShape:
+      - - {x: -8.5, y: 0.5}
+        - {x: -3.5, y: -4.5}
+        - {x: 8.5, y: -4.5}
+        - {x: 8.5, y: 5.5}
+        - {x: -8.5, y: 5.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_49
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 24
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: -13}
+        - {x: 10.5, y: -18}
+        - {x: 12.5, y: -20}
+        - {x: 17.5, y: -19}
+        - {x: 19.5, y: -17}
+        - {x: 19.5, y: -11}
+        - {x: 12.5, y: -11}
+      - - {x: -10.5, y: 13}
+        - {x: -19.5, y: 0}
+        - {x: -19.5, y: -19}
+        - {x: -11.5, y: -19}
+        - {x: -4.5, y: -17}
+        - {x: 19.5, y: -2}
+        - {x: 19.5, y: 13}
+      physicsShape:
+      - - {x: 10.5, y: -13}
+        - {x: 10.5, y: -18}
+        - {x: 12.5, y: -20}
+        - {x: 17.5, y: -19}
+        - {x: 19.5, y: -17}
+        - {x: 19.5, y: -11}
+        - {x: 12.5, y: -11}
+      - - {x: -10.5, y: 13}
+        - {x: -19.5, y: 0}
+        - {x: -19.5, y: -19}
+        - {x: -11.5, y: -19}
+        - {x: -4.5, y: -17}
+        - {x: 19.5, y: -2}
+        - {x: 19.5, y: 13}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_50
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 27
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: -17.5}
+        - {x: -18.5, y: -18.5}
+        - {x: -13.5, y: -22.5}
+        - {x: -5.5, y: -22.5}
+        - {x: -5.5, y: -17.5}
+        - {x: -7.5, y: -15.5}
+        - {x: -16.5, y: -15.5}
+      - - {x: -24.5, y: 15.5}
+        - {x: -24.5, y: -1.5}
+        - {x: -21.5, y: -3.5}
+        - {x: 13.5, y: -22.5}
+        - {x: 24.5, y: -22.5}
+        - {x: 24.5, y: -7.5}
+        - {x: -15.5, y: 13.5}
+      physicsShape:
+      - - {x: -18.5, y: -17.5}
+        - {x: -18.5, y: -18.5}
+        - {x: -13.5, y: -22.5}
+        - {x: -5.5, y: -22.5}
+        - {x: -5.5, y: -17.5}
+        - {x: -7.5, y: -15.5}
+        - {x: -16.5, y: -15.5}
+      - - {x: -24.5, y: 15.5}
+        - {x: -24.5, y: -1.5}
+        - {x: -21.5, y: -3.5}
+        - {x: 13.5, y: -22.5}
+        - {x: 24.5, y: -22.5}
+        - {x: 24.5, y: -7.5}
+        - {x: -15.5, y: 13.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 38}
+        - {x: -22, y: 38}
+        - {x: -32, y: 34}
+        - {x: -32, y: -41}
+        - {x: 32, y: -41}
+        - {x: 32, y: 19}
+        - {x: 18, y: 36}
+      physicsShape:
+      - - {x: 16, y: 38}
+        - {x: -22, y: 38}
+        - {x: -32, y: 34}
+        - {x: -32, y: -41}
+        - {x: 32, y: -41}
+        - {x: 32, y: 19}
+        - {x: 18, y: 36}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_52
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 29
+        width: 63
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.5, y: 41}
+        - {x: -31.5, y: 26}
+        - {x: -31.5, y: -40}
+        - {x: 31.5, y: -40}
+        - {x: 31.5, y: 21}
+        - {x: 21.5, y: 41}
+      physicsShape:
+      - - {x: -23.5, y: 41}
+        - {x: -31.5, y: 26}
+        - {x: -31.5, y: -40}
+        - {x: 31.5, y: -40}
+        - {x: 31.5, y: 21}
+        - {x: 21.5, y: 41}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_53
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 28
+        width: 65
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 40.5}
+        - {x: -31.5, y: 25.5}
+        - {x: -31.5, y: -40.5}
+        - {x: 32.5, y: -40.5}
+        - {x: 32.5, y: 19.5}
+        - {x: 21.5, y: 40.5}
+      physicsShape:
+      - - {x: -28.5, y: 40.5}
+        - {x: -31.5, y: 25.5}
+        - {x: -31.5, y: -40.5}
+        - {x: 32.5, y: -40.5}
+        - {x: 32.5, y: 19.5}
+        - {x: 21.5, y: 40.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_54
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 16}
+      - - {x: -9.5, y: -1}
+        - {x: -9.5, y: -7}
+      - - {x: -0.5, y: -1}
+        - {x: 2.5, y: -1}
+        - {x: 2.5, y: -7}
+        - {x: -0.5, y: -7}
+      - - {x: 11.5, y: -1}
+        - {x: 10.5, y: -1}
+        - {x: 10.5, y: -7}
+        - {x: 11.5, y: -7}
+      - - {x: 2.5, y: 13}
+        - {x: 0.5, y: 12}
+        - {x: 0.5, y: 9}
+        - {x: 2.5, y: 9}
+      physicsShape:
+      - - {x: -15.5, y: 16}
+        - {x: -15.5, y: -16}
+        - {x: 15.5, y: -16}
+        - {x: 15.5, y: 16}
+      - - {x: -9.5, y: -1}
+        - {x: -9.5, y: -7}
+      - - {x: -0.5, y: -1}
+        - {x: 2.5, y: -1}
+        - {x: 2.5, y: -7}
+        - {x: -0.5, y: -7}
+      - - {x: 11.5, y: -1}
+        - {x: 10.5, y: -1}
+        - {x: 10.5, y: -7}
+        - {x: 11.5, y: -7}
+      - - {x: 2.5, y: 13}
+        - {x: 0.5, y: 12}
+        - {x: 0.5, y: 9}
+        - {x: 2.5, y: 9}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_55
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 15}
+        - {x: -13, y: 13}
+        - {x: -13, y: -14}
+        - {x: -12, y: -15}
+        - {x: 12, y: -15}
+        - {x: 13, y: -14}
+        - {x: 13, y: 13}
+        - {x: 11, y: 15}
+      physicsShape:
+      - - {x: -11, y: 15}
+        - {x: -13, y: 13}
+        - {x: -13, y: -14}
+        - {x: -12, y: -15}
+        - {x: 12, y: -15}
+        - {x: 13, y: -14}
+        - {x: 13, y: 13}
+        - {x: 11, y: 15}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_56
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.5, y: -10.5}
+        - {x: -8.5, y: -12.5}
+        - {x: 8.5, y: -12.5}
+        - {x: 8.5, y: 2.5}
+        - {x: 6.5, y: 8.5}
+        - {x: -5.5, y: 8.5}
+        - {x: -9.5, y: 5.5}
+      physicsShape:
+      - - {x: -9.5, y: -10.5}
+        - {x: -8.5, y: -12.5}
+        - {x: 8.5, y: -12.5}
+        - {x: 8.5, y: 2.5}
+        - {x: 6.5, y: 8.5}
+        - {x: -5.5, y: 8.5}
+        - {x: -9.5, y: 5.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_57
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 6
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 10}
+        - {x: -8.5, y: 8}
+        - {x: -8.5, y: -4}
+        - {x: -3.5, y: -11}
+        - {x: 5.5, y: -11}
+        - {x: 9.5, y: -3}
+        - {x: 9.5, y: 8}
+        - {x: 7.5, y: 10}
+      physicsShape:
+      - - {x: -3.5, y: 10}
+        - {x: -8.5, y: 8}
+        - {x: -8.5, y: -4}
+        - {x: -3.5, y: -11}
+        - {x: 5.5, y: -11}
+        - {x: 9.5, y: -3}
+        - {x: 9.5, y: 8}
+        - {x: 7.5, y: 10}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_58
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 6
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 8.5}
+        - {x: -3, y: 7.5}
+        - {x: -3, y: -5.5}
+        - {x: -2, y: -7.5}
+        - {x: 2, y: -7.5}
+        - {x: 5, y: -4.5}
+        - {x: 5, y: 5.5}
+        - {x: 3, y: 8.5}
+      physicsShape:
+      - - {x: 0, y: 8.5}
+        - {x: -3, y: 7.5}
+        - {x: -3, y: -5.5}
+        - {x: -2, y: -7.5}
+        - {x: 2, y: -7.5}
+        - {x: 5, y: -4.5}
+        - {x: 5, y: 5.5}
+        - {x: 3, y: 8.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_59
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 5
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 10.5}
+        - {x: -5.5, y: 8.5}
+        - {x: -5.5, y: -9.5}
+        - {x: -4.5, y: -10.5}
+        - {x: 6.5, y: -10.5}
+        - {x: 6.5, y: 6.5}
+        - {x: 3.5, y: 10.5}
+      physicsShape:
+      - - {x: -2.5, y: 10.5}
+        - {x: -5.5, y: 8.5}
+        - {x: -5.5, y: -9.5}
+        - {x: -4.5, y: -10.5}
+        - {x: 6.5, y: -10.5}
+        - {x: 6.5, y: 6.5}
+        - {x: 3.5, y: 10.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_60
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 288
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 19}
+        - {x: -17, y: -19}
+        - {x: 17, y: -19}
+        - {x: 17, y: 19}
+      physicsShape:
+      - - {x: -17, y: 19}
+        - {x: -17, y: -19}
+        - {x: 17, y: -19}
+        - {x: 17, y: 19}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_61
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 325
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 17.5}
+        - {x: -15.5, y: -17.5}
+        - {x: 15.5, y: -17.5}
+        - {x: 15.5, y: 17.5}
+      physicsShape:
+      - - {x: -15.5, y: 17.5}
+        - {x: -15.5, y: -17.5}
+        - {x: 15.5, y: -17.5}
+        - {x: 15.5, y: 17.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_62
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 287
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 19}
+        - {x: -15, y: -19}
+        - {x: 15, y: -19}
+        - {x: 15, y: 19}
+      physicsShape:
+      - - {x: -15, y: 19}
+        - {x: -15, y: -19}
+        - {x: 15, y: -19}
+        - {x: 15, y: 19}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_63
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 302
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 24.5}
+        - {x: -20, y: -24.5}
+        - {x: 20, y: -24.5}
+        - {x: 20, y: 24.5}
+      physicsShape:
+      - - {x: -20, y: 24.5}
+        - {x: -20, y: -24.5}
+        - {x: 20, y: -24.5}
+        - {x: 20, y: 24.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_64
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 253
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 24.5}
+        - {x: -20.5, y: -23.5}
+        - {x: 20.5, y: -23.5}
+        - {x: 20.5, y: 24.5}
+      physicsShape:
+      - - {x: -20.5, y: 24.5}
+        - {x: -20.5, y: -23.5}
+        - {x: 20.5, y: -23.5}
+        - {x: 20.5, y: 24.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 253
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 24.5}
+        - {x: -23, y: -23.5}
+        - {x: 23, y: -23.5}
+        - {x: 23, y: 24.5}
+      physicsShape:
+      - - {x: -23, y: 24.5}
+        - {x: -23, y: -23.5}
+        - {x: 23, y: -23.5}
+        - {x: 23, y: 24.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 357
+        width: 95
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 17, y: 12, z: 14, w: 17}
+      outline:
+      - - {x: -23, y: 26}
+        - {x: -23, y: -26}
+        - {x: 23, y: -26}
+        - {x: 23, y: 26}
+      physicsShape:
+      - - {x: -23, y: 26}
+        - {x: -23, y: -26}
+        - {x: 23, y: -26}
+        - {x: 23, y: 26}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_69
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 95
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 30, z: 9, w: 45}
+      outline:
+      - - {x: -15.5, y: 17}
+        - {x: -15.5, y: -17}
+        - {x: 15.5, y: -17}
+        - {x: 15.5, y: 17}
+      physicsShape:
+      - - {x: -15.5, y: 17}
+        - {x: -15.5, y: -17}
+        - {x: 15.5, y: -17}
+        - {x: 15.5, y: 17}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_76
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 162
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 15.5}
+        - {x: -15.5, y: -15.5}
+        - {x: 15.5, y: -15.5}
+        - {x: 15.5, y: 15.5}
+      physicsShape:
+      - - {x: -15.5, y: 15.5}
+        - {x: -15.5, y: -15.5}
+        - {x: 15.5, y: -15.5}
+        - {x: 15.5, y: 15.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_77
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 128
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 17}
+        - {x: -16, y: -17}
+        - {x: 16, y: -17}
+        - {x: 16, y: 17}
+      physicsShape:
+      - - {x: -16, y: 17}
+        - {x: -16, y: -17}
+        - {x: 16, y: -17}
+        - {x: 16, y: 17}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 30, y: 0, z: 34, w: 13}
+      outline:
+      - - {x: -23, y: 13}
+        - {x: -23, y: -13}
+        - {x: 23, y: -13}
+        - {x: 23, y: 13}
+      physicsShape:
+      - - {x: -23, y: 13}
+        - {x: -23, y: -13}
+        - {x: 23, y: -13}
+        - {x: 23, y: 13}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 0, z: 15, w: 12}
+      outline:
+      - - {x: -30.5, y: 13.5}
+        - {x: -31.5, y: 11.5}
+        - {x: -31.5, y: -13.5}
+        - {x: 31.5, y: -13.5}
+        - {x: 31.5, y: 13.5}
+      physicsShape:
+      - - {x: -30.5, y: 13.5}
+        - {x: -31.5, y: 11.5}
+        - {x: -31.5, y: -13.5}
+        - {x: 31.5, y: -13.5}
+        - {x: 31.5, y: 13.5}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tile_castle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 128
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 23, y: 0, z: 24, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
