@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour {
 
 	bool PlayerOutOfDeadzone()
 	{
-		if (!deadZone.Contains(playerTransform.position))
+		if (playerTransform && !deadZone.Contains(playerTransform.position))
 		// if ((playerTransform.position.x < deadZone.xMin) ||
 		// ((playerTransform.position.x > deadZone.xMax)) ||
 		// ((playerTransform.position.y < deadZone.yMin)) ||
@@ -58,10 +58,10 @@ public class CameraController : MonoBehaviour {
 
 	bool CheckFollowCondition()
 	{
-		if ((playerTransform.position.x < transform.position.x + 0.5) &&
+		if (playerTransform && ((playerTransform.position.x < transform.position.x + 0.5) &&
 		(playerTransform.position.x > transform.position.x - 0.5) &&
 		(playerTransform.position.y < transform.position.y + 0.5) &&
-		(playerTransform.position.y > transform.position.y - 0.5))
+		(playerTransform.position.y > transform.position.y - 0.5)))
 			return (true);
 		return (false);
 	}
@@ -141,25 +141,27 @@ public class CameraController : MonoBehaviour {
 		// 	}
 		// 	Debug.Log(camCorrection);
 		//	 Debug.Log(currentVelocity.magnitude);
-			moveTo = Vector3.SmoothDamp(transform.position, playerTransform.position, ref(currentVelocity), smoothTime);
-			// Debug.Log(moveTo);
-
-			moveTo.x = ((moveTo - (Vector3.right * camHalf / 9 * 16)).x - worldLimit.xMin < 0.001)? transform.position.x : moveTo.x;
-			moveTo.x = (worldLimit.xMax - (moveTo + (Vector3.right * camHalf / 9 * 16)).x < 0.001)? transform.position.x : moveTo.x;
-			moveTo.y = ((moveTo - (Vector3.up * camHalf)).y - worldLimit.yMin < 0.001)? transform.position.y : moveTo.y;
-			moveTo.y = (worldLimit.yMax - (moveTo + (Vector3.up * camHalf)).y < 0.001)? transform.position.y : moveTo.y;
-			
-			moveTo.z = cameraDist;
-		//	Debug.Log(moveTo);
-			transform.position = moveTo;
-			// Debug.DrawLine(transform.position, playerTransform.position + camCorrection, Color.green, 1f);
-			if (CheckFollowCondition())
+			if (playerTransform)
 			{
-				currentVelocity = Vector3.zero;
-				followPlayer = false;
+				moveTo = Vector3.SmoothDamp(transform.position, playerTransform.position, ref(currentVelocity), smoothTime);
+				// Debug.Log(moveTo);
+
+				moveTo.x = ((moveTo - (Vector3.right * camHalf / 9 * 16)).x - worldLimit.xMin < 0.001)? transform.position.x : moveTo.x;
+				moveTo.x = (worldLimit.xMax - (moveTo + (Vector3.right * camHalf / 9 * 16)).x < 0.001)? transform.position.x : moveTo.x;
+				moveTo.y = ((moveTo - (Vector3.up * camHalf)).y - worldLimit.yMin < 0.001)? transform.position.y : moveTo.y;
+				moveTo.y = (worldLimit.yMax - (moveTo + (Vector3.up * camHalf)).y < 0.001)? transform.position.y : moveTo.y;
+				
+				moveTo.z = cameraDist;
+			//	Debug.Log(moveTo);
+				transform.position = moveTo;
+				// Debug.DrawLine(transform.position, playerTransform.position + camCorrection, Color.green, 1f);
+				if (CheckFollowCondition())
+				{
+					currentVelocity = Vector3.zero;
+					followPlayer = false;
+				}
 			}
 		}
-
 	}
 
 }
