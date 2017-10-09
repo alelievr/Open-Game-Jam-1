@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86674e3fefa4b4957bf559f76aed5521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: 
+  nextLevelName: Neo Versaille
   panel: {fileID: 114649353525733120}
   fadeTime: 3
   fadeCurve:
@@ -2430,7 +2430,8 @@ MonoBehaviour:
   icePlatformImage: {fileID: 114469116915402920}
   slimePlatformText: {fileID: 114184414237482474}
   slimePlatformImage: {fileID: 114473188670696600}
-  disabledColor: {r: 0, g: 0, b: 0, a: 0}
+  platformPlacedClip: {fileID: 8300000, guid: 740cd34428f644877843e3540494c838, type: 3}
+  disabledColor: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 1}
   fadeOutDuration: 0.3
 --- !u!114 &114988743973518494
 MonoBehaviour:

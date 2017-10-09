@@ -24,3 +24,8 @@ https://crateboy.itch.io/crateboy-2007-2014
 
 # Music
 Danse Macabre Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 3.0 License http://creativecommons.org/licenses/by/3.0/
+
+# SFX
+https://freesound.org/people/fins/sounds/146726/
+https://freesound.org/people/Under7dude/sounds/163441/
+https://freesound.org/people/Dpoggioli/sounds/196914/
