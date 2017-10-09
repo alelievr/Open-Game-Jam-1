@@ -12,10 +12,14 @@ public class LevelFadeOut : MonoBehaviour {
 	public float			fadeTime = .5f;
 	public AnimationCurve	fadeCurve;
 
+	AudioSource				playerAudioSource;
+
 	float			alpha;
 
 	void Start()
 	{
+		playerAudioSource = Camera.main.GetComponent< AudioSource >();
+
 		StartCoroutine(FadeOut());
 	}
 
@@ -27,6 +31,7 @@ public class LevelFadeOut : MonoBehaviour {
 		{
 			alpha = 1 - ((Time.time - startTime) / fadeTime);
 			alpha = fadeCurve.Evaluate(alpha);
+			playerAudioSource.volume = 1 - alpha;
 			panel.color = new Color(0, 0, 0, alpha);
 			yield return null;
 		} while (alpha > 0f);
@@ -41,6 +46,7 @@ public class LevelFadeOut : MonoBehaviour {
 		{
 			alpha = (Time.time - startTime) / fadeTime;
 			alpha = fadeCurve.Evaluate(alpha);
+			playerAudioSource.volume = 1 - alpha;
 			panel.color = new Color(0, 0, 0, alpha);
 			yield return null;
 		} while (alpha < 1f);

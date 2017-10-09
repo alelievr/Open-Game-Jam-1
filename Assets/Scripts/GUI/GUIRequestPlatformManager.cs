@@ -12,6 +12,8 @@ public class GUIRequestPlatformManager : MonoBehaviour {
 	public Text		slimePlatformText;
 	public Image	slimePlatformImage;
 
+	public AudioClip	platformPlacedClip;
+
 	[Space]
 	public Color	disabledColor;
 	public float	fadeOutDuration = .3f;
@@ -25,6 +27,7 @@ public class GUIRequestPlatformManager : MonoBehaviour {
 	Color			slimeColor;
 	
 	PlatformRequestSystem	prs;
+	AudioSource				audioSource;
 
 	void OnEnable()
 	{
@@ -49,13 +52,21 @@ public class GUIRequestPlatformManager : MonoBehaviour {
 		slimeText = slimePlatformText.text;
 		slimeColor = slimePlatformImage.color;
 
+		audioSource = Camera.main.GetComponent< AudioSource >();
+
 		foreach (var kp in prs.platforms)
-			OnPlatformPlaced(kp.type, kp.availableNumber);
+		{
+			UpdatePlatformText(kp.type, kp.availableNumber);
+			if (kp.availableNumber == 0)
+				DisablePlatformPreview(kp.type);
+		}
 	}
 
 	public void OnPlatformPlaced(RequestPlatformType type, int remaining)
 	{
 		UpdatePlatformText(type, remaining);
+
+		audioSource.PlayOneShot(platformPlacedClip, .4f);
 
 		if (remaining == 0)
 			DisablePlatformPreview(type);

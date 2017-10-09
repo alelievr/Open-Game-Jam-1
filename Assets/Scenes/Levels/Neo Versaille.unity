@@ -431,11 +431,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 850b6f13874cf4058930be71afba2c7a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0337afd32ed5b46fbb4f80ff44b165b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4273,6 +4273,80 @@ Transform:
   m_Father: {fileID: 1588005322}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &97249276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 97249277}
+  - component: {fileID: 97249279}
+  - component: {fileID: 97249278}
+  m_Layer: 0
+  m_Name: Text (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &97249277
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97249276}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7084014, w: 0.7058099}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 333041128}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.21}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -20.509, y: -7.036}
+  m_SizeDelta: {x: 9.3647, y: 3.6007}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &97249278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97249276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 63bd03ca62a6449b1bb95c42ab987291, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Click !
+--- !u!222 &97249279
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97249276}
 --- !u!4 &101879260 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4742222172783280, guid: 6965ffde49b0140888c19c9fe6034de4,
@@ -10500,6 +10574,7 @@ RectTransform:
   - {fileID: 1764304089}
   - {fileID: 658803002}
   - {fileID: 1376408215}
+  - {fileID: 97249277}
   m_Father: {fileID: 548838999}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.105000004}
@@ -41017,7 +41092,8 @@ MonoBehaviour:
   icePlatformImage: {fileID: 2046965134}
   slimePlatformText: {fileID: 1204162555}
   slimePlatformImage: {fileID: 1398942075}
-  disabledColor: {r: 0, g: 0, b: 0, a: 0}
+  platformPlacedClip: {fileID: 8300000, guid: 740cd34428f644877843e3540494c838, type: 3}
+  disabledColor: {r: 0.5955882, g: 0.5955882, b: 0.5955882, a: 1}
   fadeOutDuration: 0.3
 --- !u!114 &925923351
 MonoBehaviour:
@@ -52754,7 +52830,18 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114991395418526526, guid: 24532e8b67cb145f98621ebd698e6d53,
+        type: 2}
+      propertyPath: ouchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 06d757affaa6947cca650cc48f59c951, type: 3}
+    - target: {fileID: 114991395418526526, guid: 24532e8b67cb145f98621ebd698e6d53,
+        type: 2}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2911f9908eea4049b6ed55e6670572c, type: 3}
+    m_RemovedComponents:
+    - {fileID: 82019996873170818, guid: 24532e8b67cb145f98621ebd698e6d53, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 24532e8b67cb145f98621ebd698e6d53, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1324875247

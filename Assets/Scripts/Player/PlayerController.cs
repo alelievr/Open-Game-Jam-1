@@ -21,6 +21,10 @@ public class PlayerController : Stopmoving {
 	[Space]
 	public float		slimeVelocityIgnore = .5f;
 
+	[Space]
+	public AudioClip	ouchClip;
+	public AudioClip	jumpClip;
+
 	public int			life = 5;
 	public float		timeInvuAfterOuch = 0.7f;
 	public float		ouchtime = 0.2f;
@@ -52,7 +56,7 @@ public class PlayerController : Stopmoving {
 
 		rigidbody2D.interpolation = RigidbodyInterpolation2D.Interpolate;
 		anim = GetComponent< Animator >();
-		audiosource = GetComponent< AudioSource >();
+		audiosource = Camera.main.GetComponent< AudioSource >();
 		Flip();
 		// anim.SetBool("facingright", facingRight);
 		anim.SetBool("grounded", grounded);
@@ -176,7 +180,10 @@ public class PlayerController : Stopmoving {
 		if (life < 1)
 			Die();
 		else
+		{
+			audiosource.PlayOneShot(ouchClip, .6f);
 			anim.SetTrigger("ouch");
+		}
 		timesinceouch = 0;
 	}
 
@@ -194,6 +201,7 @@ public class PlayerController : Stopmoving {
 			return ;
 		if (grounded && Input.GetKeyDown(KeyCode.Space) && canJump)
 		{
+			audiosource.PlayOneShot(jumpClip, .2f);
 			rigidbody2D.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
 			StartCoroutine(JumpDelay());
 		}
