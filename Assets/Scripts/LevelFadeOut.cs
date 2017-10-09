@@ -41,7 +41,6 @@ public class LevelFadeOut : MonoBehaviour {
 	{
 		float	startTime = Time.time;
 		
-		Debug.Log("Draw in");
 		do
 		{
 			alpha = (Time.time - startTime) / fadeTime;
@@ -53,5 +52,10 @@ public class LevelFadeOut : MonoBehaviour {
 
 		if (!string.IsNullOrEmpty(nextLevelName))
 			SceneManager.LoadScene(nextLevelName);
+	}
+
+	public void StartFadeIn()
+	{
+		StartCoroutine(FadeIn());
 	}
 }

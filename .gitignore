@@ -39,3 +39,6 @@ sysinfo.txt
 
 *~
 .DS_Store
+*.x86
+*x86_64
+*_Data

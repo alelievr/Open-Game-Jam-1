@@ -11,6 +11,7 @@ TagManager:
   - bam
   - Slime
   - Ice
+  - OS
   layers:
   - Default
   - TransparentFX

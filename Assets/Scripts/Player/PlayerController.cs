@@ -218,6 +218,13 @@ public class PlayerController : Stopmoving {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (other.tag == "OS")
+		{
+			life = 0;
+			Die();
+			return ;
+		}
+
 		if (invutime > timeInvuAfterOuch && other.tag == "ouch")
 			ouch();
 	}

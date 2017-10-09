@@ -52762,7 +52762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86674e3fefa4b4957bf559f76aed5521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: Castel
+  nextLevelName: Castle
   panel: {fileID: 1716970142}
   fadeTime: 3
   fadeCurve:

@@ -25,7 +25,6 @@ public class tombercailloux : MonoBehaviour {
 		{
 			ps.Stop();
 			timesincelast = 0;
-			Debug.Log("fd");
 			GameObject.Instantiate (go, transform.position, Quaternion.identity);
 		}
 

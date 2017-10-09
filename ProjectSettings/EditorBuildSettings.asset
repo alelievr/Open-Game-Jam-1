@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Castle.unity
     guid: b251e0792466b43caa02c98a33f7c3c6
+  - enabled: 1
+    path: Assets/Credits.unity
+    guid: 03f1ff245cab7479daeeecc33c05915b
