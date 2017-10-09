@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fd5de5ebcccce45bcbb60af92ef268ee
-timeCreated: 1507485646
+timeCreated: 1507501828
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1147,9 +1147,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 24
-        width: 39
-        height: 42
+        y: 33
+        width: 64
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1188,10 +1188,10 @@ TextureImporter:
       name: tile_castle_50
       rect:
         serializedVersion: 2
-        x: 239
-        y: 27
-        width: 49
-        height: 45
+        x: 224
+        y: 35
+        width: 64
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1777,7 +1777,7 @@ TextureImporter:
         width: 128
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 23, y: 0, z: 24, w: 0}
       outline: []
       physicsShape: []
