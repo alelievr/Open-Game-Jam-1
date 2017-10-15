@@ -26,11 +26,8 @@ public class PlayerController : Stopmoving {
 	public AudioClip	jumpClip;
 
 	public int			life = 5;
-	public float		timeInvuAfterOuch = 0.7f;
-	public float		ouchtime = 0.2f;
-	public float		ouchbacklash = 1f;
-	float				timesinceouch = 100;
-	float				invutime = 0;
+	public float		invulnTime = 1f;
+	bool				canOuch = true;
 	bool				sliding = false;
 
 	bool				istapping = false;
@@ -69,13 +66,8 @@ public class PlayerController : Stopmoving {
 		
 		float move;
 		
-		move = Input.GetAxis("Horizontal");
+		move = Input.GetAxisRaw("Horizontal");
 
-		timesinceouch += Time.deltaTime;
-		invutime += Time.deltaTime;
-		if (timesinceouch < ouchtime)
-			return ;
-		
 		if (base.cannotmove == true)
 			return ;
 
@@ -176,6 +168,8 @@ public class PlayerController : Stopmoving {
 
 	void ouch()
 	{
+		canOuch = false;
+		StartCoroutine(ResetCanOuch());
 		life--;
 		if (life < 1)
 			Die();
@@ -184,7 +178,12 @@ public class PlayerController : Stopmoving {
 			audiosource.PlayOneShot(ouchClip, .6f);
 			anim.SetTrigger("ouch");
 		}
-		timesinceouch = 0;
+	}
+
+	IEnumerator ResetCanOuch()
+	{
+		yield return new WaitForSeconds(invulnTime);
+		canOuch = true;
 	}
 
 	IEnumerator JumpDelay()
@@ -195,9 +194,9 @@ public class PlayerController : Stopmoving {
 	}
 	
 	void Update () {
-		if (base.cannotmove == true)
+		if (life < 0)
 			return ;
-		if (timesinceouch < ouchtime)
+		if (base.cannotmove == true)
 			return ;
 		if (grounded && Input.GetKeyDown(KeyCode.Space) && canJump)
 		{
@@ -225,7 +224,7 @@ public class PlayerController : Stopmoving {
 			return ;
 		}
 
-		if (invutime > timeInvuAfterOuch && other.tag == "ouch")
+		if (canOuch && other.tag == "ouch")
 			ouch();
 	}
 

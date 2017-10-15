@@ -7,16 +7,16 @@
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
 		LOD 100
+		ZWrite Off
+        Blend SrcAlpha OneMinusSrcAlpha
 
 		Pass
 		{
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 
@@ -50,7 +50,7 @@
 			{
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-				if (col.a != 0)
+				if (col.a > 0.1f)
 					col = _Color;
 
 				return col;

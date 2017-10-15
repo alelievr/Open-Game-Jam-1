@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonParticle : MonoBehaviour {
 
-	public float			speed = .1f;
+	public float			speed = 1f;
 	public GameObject		destroyOnTrigger;
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -15,7 +15,6 @@ public class ButtonParticle : MonoBehaviour {
 		if (destroyOnTrigger != null)
 		{
 			StartCoroutine(MoveTo(destroyOnTrigger.transform.position));
-			Destroy(destroyOnTrigger);
 		}
 	}
 
@@ -23,9 +22,10 @@ public class ButtonParticle : MonoBehaviour {
 	{
 		while ((transform.position - to).magnitude > 0.1f)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, to, speed);
+			transform.position = Vector3.MoveTowards(transform.position, to, speed * Time.deltaTime);
 			yield return null;
 		}
+		Destroy(destroyOnTrigger);
 		Destroy(gameObject);
 	}
 

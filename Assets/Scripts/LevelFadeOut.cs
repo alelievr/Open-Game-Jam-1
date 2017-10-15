@@ -54,8 +54,10 @@ public class LevelFadeOut : MonoBehaviour {
 			SceneManager.LoadScene(nextLevelName);
 	}
 
-	public void StartFadeIn()
+	public void StartFadeIn(string levelName = null)
 	{
+		if (levelName != null)
+			nextLevelName = levelName;
 		StartCoroutine(FadeIn());
 	}
 }
